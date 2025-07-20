@@ -1,3 +1,31 @@
+@font-face {
+    font-family: 'Bobby Jones Soft';
+    src: url('/fonts/Bobby Jones Soft.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bobby Jones Soft Outline';
+    src: url('/fonts/Bobby Jones Soft Outline.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bobby Rough Soft';
+    src: url('/fonts/Bobby Rough Soft.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bobby Rough Soft Outline';
+    src: url('/fonts/Bobby Rough Soft Outline.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 @import "tailwindcss";
 
 :root {
@@ -31,7 +59,8 @@
 body {
     background: var(--background);
     color: var(--foreground);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Bobby Jones Soft', sans-serif;
+    font-weight: normal;
 }
 
 .primary-button {
