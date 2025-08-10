@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export const ContactSection = () => {
   return (
-    <div className={'bg-secondary flex flex-col items-center justify-center w-full py-16 md:py-24 px-4'}>
+    <section id="contact" className={'bg-secondary flex flex-col items-center justify-center w-full py-16 md:py-24 px-4'}>
       <div className={'w-full max-w-6xl'}>
         <h1 className={'text-center text-4xl md:text-6xl font-bold text-accent uppercase mb-16'}>
           Nous contacter
@@ -59,6 +59,6 @@ export const ContactSection = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

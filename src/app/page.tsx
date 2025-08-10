@@ -6,12 +6,6 @@ import { QuiSommesNousSection } from '@/components/QuiSommesNous';
 import { ParticiperSection } from '@/components/Participer';
 import { NosActions } from '@/components/NosActions';
 import { Dons } from '@/components/Dons';
-import { CountdownSection } from '@/components/sections/CountdownSection';
-import { AboutSection } from '@/components/sections/AboutSection';
-import { EventsSection } from '@/components/sections/EventsSection';
-import { StatsSection } from '@/components/sections/StatsSection';
-import { DonationSection } from '@/components/sections/DonationSection';
-import { PartnersSection } from '@/components/sections/PartnersSection';
 import { ContactSection } from '@/components/sections/ContactSection';
 import { Footer } from '@/components/sections/Footer';
 
@@ -24,12 +18,6 @@ export default function Home() {
       <ParticiperSection />
       <NosActions />
       <Dons />
-      <CountdownSection />
-      <AboutSection />
-      <EventsSection />
-      <StatsSection />
-      <DonationSection />
-      <PartnersSection />
       <ContactSection />
       <Footer />
     </div>

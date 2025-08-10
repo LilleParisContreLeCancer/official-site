@@ -15,12 +15,13 @@ export const HeaderContent = ({ navItemsProps }: HeaderContentProps) => {
 
       <div className="hidden lg:flex items-center gap-8">
         <ul className={clsx('flex gap-8', navItemsProps)}>
-          <HeaderLink href="#" label="Qui sommes-nous ?"/>
-          <HeaderLink href="#" label="Evenements"/>
-          <HeaderLink href="#" label="Vos dons"/>
-          <HeaderLink href="#" label="Partenaires"/>
+          <HeaderLink href="#qui-sommes-nous" label="Qui sommes-nous ?"/>
+          <HeaderLink href="#participer" label="Participer"/>
+          <HeaderLink href="#nos-actions" label="Nos actions"/>
+          <HeaderLink href="#dons" label="Vos dons"/>
+          <HeaderLink href="#contact" label="Contact"/>
         </ul>
-        <Link href="#" className="primary-button font-semibold text-lg text-on-primary py-3 px-6">Faire un don</Link>
+        <Link href="#dons" className="primary-button font-semibold text-lg text-on-primary py-3 px-6">Faire un don</Link>
       </div>
 
       <BurgerMenu />

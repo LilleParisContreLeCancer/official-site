@@ -9,7 +9,7 @@ export const BoutonDon = ({ className = '' }: BoutonDonProps) => {
     <div className={`flex flex-col sm:flex-row gap-4 justify-center items-center ${className}`}>
       {/* CTA Principal - Don recherche */}
       <Link 
-        href="/don"
+        href="#dons"
         className="bg-accent text-primary font-bold text-lg md:text-xl px-8 py-4 rounded-full hover:bg-accent/90 transition-all duration-300 transform hover:scale-105 shadow-lg uppercase tracking-wide"
       >
         🎗️ Je fais un don
