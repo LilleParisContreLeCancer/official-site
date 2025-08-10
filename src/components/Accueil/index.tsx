@@ -27,6 +27,55 @@ export const AccueilSection = () => {
           {/* Donation Counter */}
           <CompteurDons className="mx-auto" />
           
+          {/* Social Media Quick Access */}
+          <div className="flex justify-center space-x-4 mt-8">
+            <a
+              href="https://instagram.com/lillepariscontrelecancer"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-3 transition-all duration-300 hover:scale-110"
+              aria-label="Suivez-nous sur Instagram"
+            >
+              <span className="text-2xl">📸</span>
+            </a>
+            <a
+              href="https://facebook.com/lillepariscontrelecancer"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-3 transition-all duration-300 hover:scale-110"
+              aria-label="Suivez-nous sur Facebook"
+            >
+              <span className="text-2xl">👥</span>
+            </a>
+            <a
+              href="https://linkedin.com/company/lille-paris-contre-le-cancer"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-3 transition-all duration-300 hover:scale-110"
+              aria-label="Suivez-nous sur LinkedIn"
+            >
+              <span className="text-2xl">💼</span>
+            </a>
+            <a
+              href="https://youtube.com/@lillepariscontrelecancer"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-3 transition-all duration-300 hover:scale-110"
+              aria-label="Suivez-nous sur YouTube"
+            >
+              <span className="text-2xl">🎥</span>
+            </a>
+            <a
+              href="https://tiktok.com/@lillepariscontrelecancer"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-3 transition-all duration-300 hover:scale-110"
+              aria-label="Suivez-nous sur TikTok"
+            >
+              <span className="text-2xl">🎵</span>
+            </a>
+          </div>
+          
         </div>
       </div>
 

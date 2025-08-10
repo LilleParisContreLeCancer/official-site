@@ -10,6 +10,10 @@ interface VideoBackgroundProps {
 export const VideoBackground = ({ className = '' }: VideoBackgroundProps) => {
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [showVideo, setShowVideo] = useState(false);
+
+  // YouTube video ID extracted from https://www.youtube.com/watch?v=pZ-cJe39f4w
+  const youtubeVideoId = 'pZ-cJe39f4w';
 
   useEffect(() => {
     // Check for reduced motion preference
@@ -24,8 +28,14 @@ export const VideoBackground = ({ className = '' }: VideoBackgroundProps) => {
     checkMobile();
     window.addEventListener('resize', checkMobile);
 
+    // Delay video loading for better performance
+    const timer = setTimeout(() => {
+      setShowVideo(true);
+    }, 1000);
+
     return () => {
       window.removeEventListener('resize', checkMobile);
+      clearTimeout(timer);
     };
   }, []);
 
@@ -53,20 +63,29 @@ export const VideoBackground = ({ className = '' }: VideoBackgroundProps) => {
         className={`object-cover ${className}`}
       />
       
-      {/* Video overlay */}
-      <video
-        muted
-        autoPlay
-        loop
-        playsInline
-        poster="/images/accueil-fallback.webp"
-        aria-label="Vidéo de présentation de l'événement Lille-Paris contre le cancer"
-        className={`absolute inset-0 w-full h-full object-cover ${className}`}
-      >
-        <source src="/videos/accueil.webm" type="video/webm" />
-        <source src="/videos/accueil.mp4" type="video/mp4" />
-        Votre navigateur ne supporte pas la lecture de vidéos.
-      </video>
+      {/* YouTube Video Embed */}
+      {showVideo && (
+        <div className={`absolute inset-0 w-full h-full ${className}`}>
+          <iframe
+            src={`https://www.youtube.com/embed/${youtubeVideoId}?autoplay=1&mute=1&loop=1&playlist=${youtubeVideoId}&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&playsinline=1&enablejsapi=1`}
+            title="Vidéo de présentation LPCC"
+            allow="autoplay; encrypted-media"
+            allowFullScreen={false}
+            className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+            style={{
+              width: '100vw',
+              height: '56.25vw', // 16:9 aspect ratio
+              minHeight: '100vh',
+              minWidth: '177.77vh', // 16:9 aspect ratio
+              transform: 'translate(-50%, -50%)',
+              top: '50%',
+              left: '50%'
+            }}
+          />
+          {/* Overlay to prevent interaction */}
+          <div className="absolute inset-0 bg-transparent pointer-events-none" />
+        </div>
+      )}
     </>
   );
 };
