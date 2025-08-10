@@ -4,6 +4,7 @@ import { Header } from '@/components/header/header';
 import { AccueilSection } from '@/components/Accueil';
 import { QuiSommesNousSection } from '@/components/QuiSommesNous';
 import { ParticiperSection } from '@/components/Participer';
+import { NosActions } from '@/components/NosActions';
 import { CountdownSection } from '@/components/sections/CountdownSection';
 import { AboutSection } from '@/components/sections/AboutSection';
 import { EventsSection } from '@/components/sections/EventsSection';
@@ -20,6 +21,7 @@ export default function Home() {
       <AccueilSection />
       <QuiSommesNousSection />
       <ParticiperSection />
+      <NosActions />
       <CountdownSection />
       <AboutSection />
       <EventsSection />

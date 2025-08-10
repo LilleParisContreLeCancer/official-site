@@ -1,0 +1,35 @@
+[
+  {
+    "id": "projet-1",
+    "titre": "Recherche sur les leucémies pédiatriques",
+    "institut": "Institut Gustave Roussy",
+    "logo": "/images/instituts/gustave-roussy.png",
+    "resume": "Développement de nouvelles thérapies ciblées pour les enfants atteints de leucémie.",
+    "montant": 5000,
+    "annee": 2023,
+    "lien_fondation": "https://www.fondationdefrance.org/fr/projet/recherche-leucemies-pediatriques",
+    "statut": "En cours"
+  },
+  {
+    "id": "projet-2",
+    "titre": "Immunothérapie contre le cancer du sein",
+    "institut": "Institut Curie",
+    "logo": "/images/instituts/institut-curie.png",
+    "resume": "Recherche sur l'efficacité de l'immunothérapie dans le traitement du cancer du sein triple négatif.",
+    "montant": 7500,
+    "annee": 2022,
+    "lien_fondation": "https://www.fondationdefrance.org/fr/projet/immunotherapie-cancer-sein",
+    "statut": "Terminé"
+  },
+  {
+    "id": "projet-3",
+    "titre": "Thérapies géniques pour les tumeurs cérébrales",
+    "institut": "ICM - Institut du Cerveau",
+    "logo": "/images/instituts/icm.png",
+    "resume": "Développement de vecteurs viraux pour cibler spécifiquement les glioblastomes.",
+    "montant": 6000,
+    "annee": 2024,
+    "lien_fondation": "https://www.fondationdefrance.org/fr/projet/therapies-geniques-tumeurs-cerebrales",
+    "statut": "Nouveau"
+  }
+]
