@@ -2,7 +2,7 @@ import { CarteLien } from './CarteLien';
 
 export const ParticiperSection = () => {
   return (
-    <section id="participer" className="py-16 md:py-24 bg-secondary">
+    <section id="participer" className="w-full bg-secondary py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-4">
         
         {/* Section intro */}

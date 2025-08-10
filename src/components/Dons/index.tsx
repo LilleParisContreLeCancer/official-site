@@ -4,9 +4,8 @@ import Image from 'next/image';
 
 export const Dons = () => {
   return (
-    <section id="dons" className="relative">
-      {/* Header de section */}
-      <div className="py-16 bg-gradient-to-br from-primary to-primary/80 text-white">
+    <section id="dons" className="w-full bg-secondary py-16 md:py-24">
+      <div className="max-w-6xl mx-auto px-4">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Faire un Don

@@ -4,8 +4,8 @@ import Image from 'next/image';
 
 export const ContactSection = () => {
   return (
-    <section id="contact" className={'bg-secondary flex flex-col items-center justify-center w-full py-16 md:py-24 px-4'}>
-      <div className={'w-full max-w-6xl'}>
+    <section id="contact" className="bg-primary py-16 md:py-24 text-white">
+      <div className="max-w-6xl mx-auto px-4">
         <h1 className={'text-center text-4xl md:text-6xl font-bold text-accent uppercase mb-16'}>
           Nous contacter
         </h1>

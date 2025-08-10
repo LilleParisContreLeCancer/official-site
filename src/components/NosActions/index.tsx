@@ -4,10 +4,10 @@ import { ProjetsSoutenus } from './ProjetsSoutenus';
 
 export const NosActions = () => {
   return (
-    <section id="nos-actions" className="relative">
+    <section id="nos-actions" className="w-full bg-primary py-16 md:py-24">
       {/* Header de section */}
-      <div className="py-16 bg-gradient-to-br from-primary to-primary/80 text-white">
-        <div className="container mx-auto px-4 text-center">
+      <div className="text-white">
+        <div className="max-w-7xl mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Nos Actions
           </h1>

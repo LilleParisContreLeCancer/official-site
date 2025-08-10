@@ -4,18 +4,17 @@ import { CarteParcours } from './CarteParcours';
 
 export const QuiSommesNousSection = () => {
   return (
-    <section id="qui-sommes-nous" className="py-16 md:py-24 bg-white">
+    <section id="qui-sommes-nous" className="w-full bg-secondary py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-4">
         
         {/* Section intro */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-primary uppercase mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6 font-bobby-rough">
             Qui sommes-nous ?
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
-            Lille-Paris Contre le Cancer est une association dédiée à soutenir la recherche médicale 
-            à travers des événements sportifs et solidaires. Notre mission : transformer chaque coup de pédale 
-            en espoir pour les patients et leurs familles.
+          </h2>
+          <p className="text-xl text-gray-800 max-w-4xl mx-auto leading-relaxed">
+            Lille Paris Contre le Cancer est une association dédiée à la lutte contre le cancer 
+            à travers le financement de la recherche médicale et le soutien aux patients et leurs familles.
           </p>
           <div className="mt-8">
             <a
