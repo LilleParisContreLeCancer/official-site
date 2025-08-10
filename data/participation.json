@@ -1,0 +1,23 @@
+{
+  "liens": {
+    "mecenat": "/mecenat-2025.pdf",
+    "benevole": "https://forms.google.com/benevole-lpcc-2025",
+    "cycliste": "https://forms.google.com/cycliste-lpcc-2025",
+    "discord": "https://discord.gg/lpcc2025"
+  },
+  "badges": {
+    "benevoles_restants": 15,
+    "cyclistes_restants": 8,
+    "membres_discord": 124
+  },
+  "utm_tracking": {
+    "facebook": "?utm_source=facebook&utm_medium=social&utm_campaign=lpcc2025",
+    "linkedin": "?utm_source=linkedin&utm_medium=social&utm_campaign=lpcc2025",
+    "instagram": "?utm_source=instagram&utm_medium=social&utm_campaign=lpcc2025"
+  },
+  "contact": {
+    "email": "lillepariscontrelecancer@mail.com",
+    "subject": "Question sur la participation LPCC 2025"
+  },
+  "lastUpdated": "2025-01-10T16:00:00.000Z"
+}

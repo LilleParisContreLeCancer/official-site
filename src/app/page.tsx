@@ -3,6 +3,7 @@
 import { Header } from '@/components/header/header';
 import { AccueilSection } from '@/components/Accueil';
 import { QuiSommesNousSection } from '@/components/QuiSommesNous';
+import { ParticiperSection } from '@/components/Participer';
 import { CountdownSection } from '@/components/sections/CountdownSection';
 import { AboutSection } from '@/components/sections/AboutSection';
 import { EventsSection } from '@/components/sections/EventsSection';
@@ -18,6 +19,7 @@ export default function Home() {
       <Header />
       <AccueilSection />
       <QuiSommesNousSection />
+      <ParticiperSection />
       <CountdownSection />
       <AboutSection />
       <EventsSection />
