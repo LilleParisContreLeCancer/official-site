@@ -1,7 +1,7 @@
 'use client';
 
 import { Header } from '@/components/header/header';
-import { HeroSection } from '@/components/sections/HeroSection';
+import { AccueilSection } from '@/components/Accueil';
 import { CountdownSection } from '@/components/sections/CountdownSection';
 import { AboutSection } from '@/components/sections/AboutSection';
 import { EventsSection } from '@/components/sections/EventsSection';
@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <div className={'flex flex-col items-center justify-center'}>
       <Header />
-      <HeroSection />
+      <AccueilSection />
       <CountdownSection />
       <AboutSection />
       <EventsSection />

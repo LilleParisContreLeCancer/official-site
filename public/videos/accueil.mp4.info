@@ -1,0 +1,21 @@
+PLACEHOLDER FILE - À REMPLACER
+
+Ce fichier doit être remplacé par une vidéo MP4 optimisée (accueil.mp4) pour le background de la section Accueil.
+
+Spécifications recommandées :
+- Format : MP4 (H.264)
+- Dimensions : 1920x1080 (16:9) minimum
+- Durée : 10-30 secondes (loop)
+- Taille : < 5MB
+- Qualité : CRF 28 (bon compromis qualité/taille)
+- Contenu : Séquences de l'événement LPCC (cyclistes en action, paysages, etc.)
+
+Commande ffmpeg pour optimiser :
+ffmpeg -i input.mov -c:v libx264 -crf 28 -c:a aac -b:a 128k -movflags +faststart accueil.mp4
+
+Pour créer cette vidéo :
+1. Utiliser des rushes de l'événement précédent
+2. Monter une séquence courte et impactante
+3. Optimiser avec ffmpeg
+4. Tester sur différents appareils
+5. Supprimer ce fichier .info
