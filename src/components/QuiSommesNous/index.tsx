@@ -4,8 +4,8 @@ import { CarteParcours } from './CarteParcours';
 
 export const QuiSommesNousSection = () => {
   return (
-    <section id="qui-sommes-nous" className="w-full bg-secondary py-16 md:py-24">
-      <div className="max-w-7xl mx-auto px-4">
+    <section id="qui-sommes-nous" className="w-full bg-primary py-16 md:py-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section intro */}
         <div className="text-center mb-16">

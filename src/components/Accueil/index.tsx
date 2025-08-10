@@ -5,7 +5,7 @@ import { CompteurDons } from './CompteurDons';
 
 export const AccueilSection = () => {
   return (
-    <section className="relative h-screen min-h-[600px] w-full overflow-hidden">
+    <section id="accueil" className="relative min-h-screen flex items-center justify-center overflow-hidden w-full">
       {/* Video Background */}
       <div className="absolute inset-0">
         <VideoBackground className="brightness-50" />

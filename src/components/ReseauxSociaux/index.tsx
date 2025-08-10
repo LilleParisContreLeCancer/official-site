@@ -62,15 +62,15 @@ export const ReseauxSociaux = () => {
   const [selectedPlatform, setSelectedPlatform] = useState<SocialPlatform>('instagram');
 
   return (
-    <section id="reseaux-sociaux" className="w-full bg-white py-16 md:py-24">
-      <div className="max-w-7xl mx-auto px-4">
+    <section id="reseaux-sociaux" className="w-full bg-primary py-16 md:py-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Suivez-nous sur les réseaux
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Découvrez nos actions, témoignages et moments forts. 
-            Rejoignez notre communauté engagée dans la lutte contre le cancer.
+          <p className="text-xl text-white/90 max-w-3xl mx-auto">
+            Restez connectés avec notre communauté et découvrez nos dernières actualités, 
+            événements et témoignages inspirants.
           </p>
         </div>
 

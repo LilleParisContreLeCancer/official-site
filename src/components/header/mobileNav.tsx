@@ -9,7 +9,7 @@ export const MobileNav = () => {
         <HeaderLink href="#participer" label="Participer" />
         <HeaderLink href="#nos-actions" label="Nos actions" />
         <HeaderLink href="#dons" label="Vos dons" />
-        <HeaderLink href="#contact" label="Contact" />
+        <HeaderLink href="#reseaux-sociaux" label="Réseaux sociaux" />
       </ul>
       <div className="flex justify-center py-4">
         <Link href="#dons" className="primary-button font-semibold text-lg text-on-primary py-3 px-6">Faire un don</Link>

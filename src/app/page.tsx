@@ -7,7 +7,6 @@ import { ParticiperSection } from '@/components/Participer';
 import { NosActions } from '@/components/NosActions';
 import { Dons } from '@/components/Dons';
 import { ReseauxSociaux } from '@/components/ReseauxSociaux';
-import { ContactSection } from '@/components/sections/ContactSection';
 import { Footer } from '@/components/sections/Footer';
 import { FloatingDonButton } from '@/components/FloatingDonButton';
 
@@ -21,7 +20,6 @@ export default function Home() {
       <NosActions />
       <Dons />
       <ReseauxSociaux />
-      <ContactSection />
       <Footer />
       <FloatingDonButton />
     </div>

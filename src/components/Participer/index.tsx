@@ -3,7 +3,7 @@ import { CarteLien } from './CarteLien';
 export const ParticiperSection = () => {
   return (
     <section id="participer" className="w-full bg-secondary py-16 md:py-24">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section intro */}
         <div className="text-center mb-16">
