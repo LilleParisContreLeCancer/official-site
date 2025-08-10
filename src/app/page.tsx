@@ -2,6 +2,7 @@
 
 import { Header } from '@/components/header/header';
 import { AccueilSection } from '@/components/Accueil';
+import { QuiSommesNousSection } from '@/components/QuiSommesNous';
 import { CountdownSection } from '@/components/sections/CountdownSection';
 import { AboutSection } from '@/components/sections/AboutSection';
 import { EventsSection } from '@/components/sections/EventsSection';
@@ -16,6 +17,7 @@ export default function Home() {
     <div className={'flex flex-col items-center justify-center'}>
       <Header />
       <AccueilSection />
+      <QuiSommesNousSection />
       <CountdownSection />
       <AboutSection />
       <EventsSection />

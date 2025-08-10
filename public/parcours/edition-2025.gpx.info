@@ -1,0 +1,33 @@
+PLACEHOLDER FILE - À REMPLACER
+
+Ce fichier doit être remplacé par le fichier GPX du parcours Lille-Paris (edition-2025.gpx).
+
+## Spécifications :
+- **Format** : GPX (GPS Exchange Format)
+- **Contenu** : Tracé complet du parcours Lille → Paris
+- **Points** : Départ, étapes intermédiaires, arrivée
+- **Données** : Coordonnées GPS, altitudes, distances
+
+## Comment créer le fichier GPX :
+1. **Planifier l'itinéraire** avec un outil comme :
+   - Komoot
+   - Strava Route Builder
+   - Garmin Connect
+   - Google My Maps (export GPX)
+
+2. **Inclure les points clés** :
+   - Départ : Grand Place, Lille
+   - Étapes : Villes de passage, points de ravitaillement
+   - Arrivée : Tour Eiffel, Paris
+
+3. **Optimiser pour le cyclisme** :
+   - Éviter les autoroutes
+   - Privilégier les pistes cyclables
+   - Inclure les points de repos
+
+4. **Tester le fichier** :
+   - Importer dans une app GPS
+   - Vérifier la cohérence du tracé
+   - Valider les distances
+
+Une fois le vrai fichier GPX créé, supprimer ce fichier .info

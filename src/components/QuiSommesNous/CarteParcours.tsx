@@ -1,0 +1,170 @@
+'use client';
+
+import { useState } from 'react';
+
+interface CarteParcoursProps {
+  className?: string;
+}
+
+export const CarteParcours = ({ className = '' }: CarteParcoursProps) => {
+  const [isLiveMode, setIsLiveMode] = useState(false);
+
+  // URL Google My Maps - à remplacer par la vraie carte
+  const mapUrl = "https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d2530.5!2d3.057256!3d50.62925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e1!4m5!1s0x47c2d579b103d5d7%3A0x40af13e816b3b80!2sLille%2C%20France!3m2!1d50.6292!2d3.0573!4m5!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis%2C%20France!3m2!1d48.8566!2d2.3522!5e0!3m2!1sfr!2sfr!4v1641234567890!5m2!1sfr!2sfr";
+
+  return (
+    <div className={`w-full ${className}`}>
+      <div className="text-center mb-8">
+        <h2 className="text-3xl md:text-4xl font-bold text-primary uppercase mb-4">
+          Notre Parcours
+        </h2>
+        <p className="text-lg text-gray-700 max-w-2xl mx-auto mb-6">
+          Découvrez l'itinéraire de notre périple de Lille à Paris, 
+          un parcours de plus de 300 kilomètres au service de la recherche contre le cancer.
+        </p>
+        
+        {/* Live tracking toggle - only visible during event */}
+        {process.env.NODE_ENV === 'development' && (
+          <div className="flex items-center justify-center gap-4 mb-6">
+            <label className="flex items-center cursor-pointer">
+              <input
+                type="checkbox"
+                checked={isLiveMode}
+                onChange={(e) => setIsLiveMode(e.target.checked)}
+                className="sr-only"
+              />
+              <div className={`relative w-12 h-6 rounded-full transition-colors ${
+                isLiveMode ? 'bg-accent' : 'bg-gray-300'
+              }`}>
+                <div className={`absolute top-1 left-1 w-4 h-4 bg-white rounded-full transition-transform ${
+                  isLiveMode ? 'translate-x-6' : 'translate-x-0'
+                }`}></div>
+              </div>
+              <span className="ml-3 text-sm font-medium text-gray-700">
+                Mode suivi en direct
+              </span>
+            </label>
+          </div>
+        )}
+      </div>
+
+      <div className="max-w-6xl mx-auto">
+        {/* Map container */}
+        <div className="relative bg-white rounded-2xl shadow-lg overflow-hidden">
+          
+          {/* Map header */}
+          <div className="bg-primary text-white p-4 flex items-center justify-between">
+            <div>
+              <h3 className="text-xl font-bold">Lille → Paris</h3>
+              <p className="text-sm opacity-90">
+                {isLiveMode ? 'Suivi en temps réel' : 'Itinéraire prévisionnel'}
+              </p>
+            </div>
+            <div className="text-right">
+              <div className="text-2xl font-bold">~300 km</div>
+              <div className="text-sm opacity-90">Distance totale</div>
+            </div>
+          </div>
+
+          {/* Map iframe */}
+          <div className="relative h-96 md:h-[500px]">
+            <iframe
+              src={mapUrl}
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Parcours Lille-Paris contre le Cancer"
+              className="w-full h-full"
+            ></iframe>
+            
+            {/* Live mode overlay */}
+            {isLiveMode && (
+              <div className="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold animate-pulse">
+                🔴 LIVE
+              </div>
+            )}
+          </div>
+
+          {/* Map footer with key info */}
+          <div className="bg-gray-50 p-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+              <div>
+                <div className="text-2xl font-bold text-primary">2 jours</div>
+                <div className="text-sm text-gray-600">Durée du parcours</div>
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-accent">8 étapes</div>
+                <div className="text-sm text-gray-600">Points de passage</div>
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-tertiary">15 km/h</div>
+                <div className="text-sm text-gray-600">Vitesse moyenne</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Additional info cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+          
+          {/* Departure info */}
+          <div className="bg-white rounded-xl shadow-md p-6">
+            <div className="flex items-center mb-4">
+              <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white text-xl font-bold">
+                🚴
+              </div>
+              <div className="ml-4">
+                <h4 className="text-lg font-bold text-primary">Départ</h4>
+                <p className="text-gray-600">Lille - Grand Place</p>
+              </div>
+            </div>
+            <p className="text-sm text-gray-700">
+              Le départ sera donné depuis la magnifique Grand Place de Lille, 
+              symbole de notre région et point de rassemblement de tous les participants.
+            </p>
+          </div>
+
+          {/* Arrival info */}
+          <div className="bg-white rounded-xl shadow-md p-6">
+            <div className="flex items-center mb-4">
+              <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center text-primary text-xl font-bold">
+                🏁
+              </div>
+              <div className="ml-4">
+                <h4 className="text-lg font-bold text-primary">Arrivée</h4>
+                <p className="text-gray-600">Paris - Tour Eiffel</p>
+              </div>
+            </div>
+            <p className="text-sm text-gray-700">
+              L'arrivée se fera au pied de la Tour Eiffel, monument emblématique 
+              qui marquera l'aboutissement de notre défi sportif et solidaire.
+            </p>
+          </div>
+        </div>
+
+        {/* GPX Download section */}
+        <div className="text-center mt-8 p-6 bg-gray-50 rounded-xl">
+          <h4 className="text-lg font-bold text-primary mb-4">
+            Télécharger le parcours
+          </h4>
+          <p className="text-gray-700 mb-6">
+            Récupérez le fichier GPX pour suivre notre itinéraire sur votre GPS ou application mobile.
+          </p>
+          <a
+            href="/parcours/edition-2025.gpx"
+            download
+            className="primary-button px-6 py-3 font-bold uppercase hover:bg-primary/80 transition-colors inline-flex items-center"
+          >
+            📍 Télécharger le GPX
+            <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+};

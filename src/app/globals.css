@@ -70,3 +70,32 @@ body {
         @apply bg-primary/80;
     }
 }
+
+/* Swiper customization */
+.partners-swiper .swiper-pagination-bullet {
+    background: var(--color-primary);
+    opacity: 0.3;
+}
+
+.partners-swiper .swiper-pagination-bullet-active {
+    opacity: 1;
+    background: var(--color-accent);
+}
+
+.partners-swiper .swiper-button-next,
+.partners-swiper .swiper-button-prev {
+    color: var(--color-primary);
+}
+
+.partners-swiper .swiper-button-next:hover,
+.partners-swiper .swiper-button-prev:hover {
+    color: var(--color-accent);
+}
+
+/* Line clamp utility */
+.line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
