@@ -1,6 +1,6 @@
 'use client';
 
-import { OptimizedImage } from '@/components/ui/OptimizedImage';
+import { LazyImage } from '@/components/ui/LazyImage';
 import { useState } from 'react';
 
 interface TeamMember {
@@ -71,13 +71,14 @@ export const Portraits = ({ className = '' }: PortraitsProps) => {
           >
             {/* Image container */}
             <div className="relative w-full h-64 overflow-hidden">
-              <OptimizedImage
+              <LazyImage
                 src={member.image}
                 alt={`Portrait de ${member.name}, ${member.role} de LPCC`}
                 fill
                 quality="HIGH"
                 sizes="PORTRAIT"
                 className="object-cover transition-transform duration-300 group-hover:scale-110"
+                rootMargin="150px 0px"
               />
 
               {/* Overlay on hover */}

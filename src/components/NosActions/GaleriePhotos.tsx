@@ -3,7 +3,8 @@
 import { useState, useCallback } from 'react';
 import Lightbox from 'yet-another-react-lightbox';
 import 'yet-another-react-lightbox/styles.css';
-import { OptimizedImage } from '@/components/ui/OptimizedImage';
+import { LazyImage } from '@/components/ui/LazyImage';
+import { LazySection } from '@/components/ui/LazySection';
 
 interface Photo {
   id: string;
@@ -178,13 +179,14 @@ export const GaleriePhotos = () => {
                 className="group relative aspect-square bg-gray-200 rounded-lg overflow-hidden cursor-pointer hover:shadow-lg transition-shadow duration-300"
                 onClick={() => openLightbox(index)}
               >
-                <OptimizedImage
+                <LazyImage
                   src={photo.src}
                   alt={photo.alt}
                   fill
                   quality="MEDIUM"
                   sizes="CARD"
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  rootMargin="100px 0px"
                 />
 
                 {/* Overlay avec titre */}
