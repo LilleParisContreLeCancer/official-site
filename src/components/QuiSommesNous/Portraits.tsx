@@ -29,7 +29,7 @@ const teamMembers: TeamMember[] = [
     name: 'Nathalie BOUQUET',
     role: 'Trésorière',
     testimonial: 'Chaque euro compte pour soutenir la recherche médicale.',
-    image: '/images/portraits/tresorier.jpg',
+    image: '/images/portraits/tresoriere.jpg',
     email: 'lillepariscontrelecancer@mail.com'
   },
   {
@@ -38,14 +38,6 @@ const teamMembers: TeamMember[] = [
     role: 'Secrétaire',
     testimonial: 'L\'organisation au service d\'une noble cause.',
     image: '/images/portraits/secretaire.jpg',
-    email: 'lillepariscontrelecancer@mail.com'
-  },
-  {
-    id: 'logistique',
-    name: 'Sandra CHANCEAU',
-    role: 'Responsable Logistique',
-    testimonial: 'Préparer chaque détail pour un événement réussi.',
-    image: '/images/portraits/logistique.jpg',
     email: 'lillepariscontrelecancer@mail.com'
   }
 ];
@@ -60,16 +52,16 @@ export const Portraits = ({ className = '' }: PortraitsProps) => {
   return (
     <div className={`w-full ${className}`}>
       <div className="text-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-primary uppercase mb-4">
+        <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-bobby-rough">
           Notre Équipe
         </h2>
-        <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-          Des passionnés unis par une mission commune : soutenir la recherche contre le cancer 
+        <p className="text-xl text-white/90 max-w-4xl mx-auto leading-relaxed">
+          Des passionnés unis par une mission commune : soutenir la recherche contre le cancer
           à travers le sport et la solidarité.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto">
         {teamMembers.map((member) => (
           <div
             key={member.id}
@@ -86,11 +78,10 @@ export const Portraits = ({ className = '' }: PortraitsProps) => {
                 className="object-cover transition-transform duration-300 group-hover:scale-110"
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
               />
-              
+
               {/* Overlay on hover */}
-              <div className={`absolute inset-0 bg-primary/80 transition-opacity duration-300 flex items-center justify-center ${
-                hoveredMember === member.id ? 'opacity-100' : 'opacity-0'
-              }`}>
+              <div className={`absolute inset-0 bg-primary/80 transition-opacity duration-300 flex items-center justify-center ${hoveredMember === member.id ? 'opacity-100' : 'opacity-0'
+                }`}>
                 <div className="text-center text-white p-4">
                   <p className="text-sm italic mb-4">"{member.testimonial}"</p>
                   <div className="flex justify-center space-x-3">
@@ -127,7 +118,7 @@ export const Portraits = ({ className = '' }: PortraitsProps) => {
             {/* Content */}
             <div className="p-6 text-center">
               <h3 className="text-xl font-bold text-primary mb-2">{member.name}</h3>
-              <p className="text-accent font-semibold uppercase text-sm tracking-wide">
+              <p className="text-accent font-semibold uppercase text-sm tracking-wide text-black">
                 {member.role}
               </p>
             </div>

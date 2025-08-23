@@ -4,21 +4,21 @@ export const ParticiperSection = () => {
   return (
     <section id="participer" className="w-full bg-secondary py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section intro */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-primary uppercase mb-6">
             Comment Participer ?
           </h1>
           <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
-            Rejoignez notre mission contre le cancer ! Que vous soyez entreprise, bénévole, 
+            Rejoignez notre mission contre le cancer ! Que vous soyez entreprise, bénévole,
             cycliste ou simplement solidaire, il y a une place pour vous dans cette aventure.
           </p>
         </div>
 
         {/* Participation cards grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          
+
           {/* Devenir mécène */}
           <CarteLien
             icon="🤝"
@@ -27,10 +27,6 @@ export const ParticiperSection = () => {
             buttonText="Dossier mécénat"
             href="/mecenat-2025.pdf"
             isExternal={true}
-            badge={{
-              text: "Déduction fiscale",
-              color: "green"
-            }}
           />
 
           {/* Être bénévole */}
@@ -39,12 +35,8 @@ export const ParticiperSection = () => {
             title="Être Bénévole"
             description="Aidez-nous dans l'organisation, la logistique, l'accueil des participants et bien plus encore !"
             buttonText="S'inscrire bénévole"
-            href="https://forms.google.com/benevole-lpcc-2025"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdEs4ESVjsgF-TCts64iuAWjfjn9-UhmzqNVbH-psIa4IRkVg/viewform?usp=sharing&ouid=103143528588335537779"
             isExternal={true}
-            badge={{
-              text: "15 places restantes",
-              color: "orange"
-            }}
           />
 
           {/* Rouler avec nous */}
@@ -53,12 +45,8 @@ export const ParticiperSection = () => {
             title="Rouler avec Nous"
             description="Participez au défi sportif Lille-Paris et pédalez pour la recherche contre le cancer."
             buttonText="Inscription cycliste"
-            href="https://forms.google.com/cycliste-lpcc-2025"
+            href="https://docs.google.com/forms/d/e/1FAIpQLScEzNOywgQYRFrtdaYGlJY_J0iOzwSvVZw3q4PbUlQNlfMqNg/viewform?usp=sharing&ouid=103143528588335537779"
             isExternal={true}
-            badge={{
-              text: "8 places restantes",
-              color: "red"
-            }}
           />
 
           {/* Rejoindre la communauté */}
@@ -69,10 +57,6 @@ export const ParticiperSection = () => {
             buttonText="Rejoindre Discord"
             href={process.env.NEXT_PUBLIC_DISCORD_INVITE_URL || "https://discord.gg/lpcc2025"}
             isExternal={true}
-            badge={{
-              text: "124 membres",
-              color: "blue"
-            }}
           />
         </div>
 
@@ -83,13 +67,13 @@ export const ParticiperSection = () => {
               Pourquoi Nous Rejoindre ?
             </h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-              Chaque participation compte dans notre lutte contre le cancer. 
+              Chaque participation compte dans notre lutte contre le cancer.
               Ensemble, nous transformons l'engagement sportif en espoir médical.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            
+
             {/* Impact */}
             <div className="text-center">
               <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center text-primary text-xl font-bold mx-auto mb-4">

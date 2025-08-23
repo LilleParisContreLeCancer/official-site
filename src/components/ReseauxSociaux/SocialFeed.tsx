@@ -1,3 +1,6 @@
+// SECTION SOCIAL FEED TEMPORAIREMENT DÉSACTIVÉE - CODE CONSERVÉ POUR RÉACTIVATION FUTURE
+
+/*
 import { SocialPlatform } from './index';
 import { YouTubeFeed } from './YouTubeFeed';
 
@@ -231,7 +234,6 @@ export const SocialFeed = ({ platform, socialLink }: SocialFeedProps) => {
 
   return (
     <div>
-      {/* Header */}
       <div className="flex items-center justify-between mb-8">
         <div className="flex items-center space-x-4">
           <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${socialLink.color} flex items-center justify-center text-2xl text-white`}>
@@ -253,10 +255,8 @@ export const SocialFeed = ({ platform, socialLink }: SocialFeedProps) => {
         </a>
       </div>
 
-      {/* Content */}
       {renderFeed()}
 
-      {/* Call to action */}
       <div className="text-center mt-8">
         <a
           href={socialLink.url}
@@ -270,4 +270,10 @@ export const SocialFeed = ({ platform, socialLink }: SocialFeedProps) => {
       </div>
     </div>
   );
+};
+*/
+
+// Placeholder export to avoid module errors
+export const SocialFeed = () => {
+  return null;
 };

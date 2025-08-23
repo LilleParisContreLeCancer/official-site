@@ -11,7 +11,7 @@ interface Photo {
   alt: string;
   title: string;
   year: number;
-  category: 'parcours' | 'equipe' | 'evenement' | 'remise';
+  category: 'parcours' | 'equipe' | 'evenement';
   width: number;
   height: number;
 }
@@ -50,30 +50,30 @@ const photosData: Photo[] = [
   },
   {
     id: '4',
-    src: '/images/actions/2023-remise-cheque.jpg',
-    alt: 'Remise de chèque 2023',
-    title: 'Remise du chèque à la Fondation de France',
-    year: 2023,
-    category: 'remise',
+    src: '/images/actions/2022-preparation-velos.jpg',
+    alt: 'Préparation vélos 2022',
+    title: 'Préparation des vélos avant le départ',
+    year: 2022,
+    category: 'equipe',
     width: 800,
     height: 600
   },
   {
     id: '5',
-    src: '/images/actions/2022-evenement-sponsors.jpg',
-    alt: 'Événement sponsors 2022',
-    title: 'Rencontre avec nos partenaires',
-    year: 2022,
-    category: 'evenement',
+    src: '/images/actions/equipe-benevoles.jpg',
+    alt: 'Equipe bénévoles',
+    title: 'Notre équipe de bénévoles',
+    year: 2024,
+    category: 'equipe',
     width: 800,
     height: 600
   },
   {
     id: '6',
-    src: '/images/actions/2022-preparation-velos.jpg',
-    alt: 'Préparation vélos 2022',
-    title: 'Préparation des vélos avant le départ',
-    year: 2022,
+    src: '/images/actions/equipe-benevoles-2.jpg',
+    alt: 'Equipe bénévoles',
+    title: 'Notre équipe de bénévoles',
+    year: 2024,
     category: 'equipe',
     width: 800,
     height: 600
@@ -84,8 +84,6 @@ const categories = [
   { key: 'all', label: 'Toutes' },
   { key: 'parcours', label: 'Parcours' },
   { key: 'equipe', label: 'Équipe' },
-  { key: 'evenement', label: 'Événements' },
-  { key: 'remise', label: 'Remises de chèques' }
 ];
 
 export const GaleriePhotos = () => {
@@ -134,11 +132,10 @@ export const GaleriePhotos = () => {
               <button
                 key={category.key}
                 onClick={() => setSelectedCategory(category.key)}
-                className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${
-                  selectedCategory === category.key
-                    ? 'bg-primary text-white'
-                    : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
-                }`}
+                className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${selectedCategory === category.key
+                  ? 'bg-primary text-white'
+                  : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
+                  }`}
               >
                 {category.label}
               </button>
@@ -150,11 +147,10 @@ export const GaleriePhotos = () => {
             <span className="text-sm font-medium text-gray-700 self-center mr-2">Année :</span>
             <button
               onClick={() => setSelectedYear('all')}
-              className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${
-                selectedYear === 'all'
-                  ? 'bg-primary text-white'
-                  : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
-              }`}
+              className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${selectedYear === 'all'
+                ? 'bg-primary text-white'
+                : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
+                }`}
             >
               Toutes
             </button>
@@ -162,11 +158,10 @@ export const GaleriePhotos = () => {
               <button
                 key={year}
                 onClick={() => setSelectedYear(year)}
-                className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${
-                  selectedYear === year
-                    ? 'bg-primary text-white'
-                    : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
-                }`}
+                className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${selectedYear === year
+                  ? 'bg-primary text-white'
+                  : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
+                  }`}
               >
                 {year}
               </button>
@@ -194,7 +189,7 @@ export const GaleriePhotos = () => {
                     target.src = '/images/placeholder-photo.jpg';
                   }}
                 />
-                
+
                 {/* Overlay avec titre */}
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300 flex items-end">
                   <div className="p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -245,7 +240,7 @@ export const GaleriePhotos = () => {
         {/* Informations sur les photos */}
         <div className="text-center mt-8 p-4 bg-white rounded-lg border border-gray-200">
           <p className="text-sm text-gray-600">
-            {filteredPhotos.length} photo{filteredPhotos.length > 1 ? 's' : ''} • 
+            {filteredPhotos.length} photo{filteredPhotos.length > 1 ? 's' : ''} •
             Cliquez sur une image pour l'agrandir
           </p>
         </div>

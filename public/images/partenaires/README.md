@@ -2,7 +2,8 @@
 
 Ce dossier doit contenir les logos des partenaires de LPCC.
 
-## Fichiers requis :
+## Fichiers requis
+
 - `fondation-france.png` - Logo Fondation de France
 - `epita.png` - Logo EPITA
 - `opal.png` - Logo OPAL

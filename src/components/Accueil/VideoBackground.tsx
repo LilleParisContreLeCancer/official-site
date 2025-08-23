@@ -52,6 +52,10 @@ export const VideoBackground = ({ className = '' }: VideoBackgroundProps) => {
     );
   }
 
+  const handleVideoClick = () => {
+    window.open(`https://www.youtube.com/watch?v=${youtubeVideoId}`, '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <>
       {/* Fallback image as poster */}
@@ -60,7 +64,8 @@ export const VideoBackground = ({ className = '' }: VideoBackgroundProps) => {
         alt="Cyclistes lors de l'événement Lille-Paris contre le cancer"
         fill
         priority
-        className={`object-cover ${className}`}
+        className={`object-cover ${className} cursor-pointer`}
+        onClick={handleVideoClick}
       />
       
       {/* YouTube Video Embed */}
@@ -82,8 +87,12 @@ export const VideoBackground = ({ className = '' }: VideoBackgroundProps) => {
               left: '50%'
             }}
           />
-          {/* Overlay to prevent interaction */}
-          <div className="absolute inset-0 bg-transparent pointer-events-none" />
+          {/* Clickable overlay to redirect to YouTube */}
+          <div 
+            className="absolute inset-0 bg-transparent cursor-pointer hover:bg-black/10 transition-colors duration-300" 
+            onClick={handleVideoClick}
+            title="Cliquez pour voir la vidéo complète sur YouTube"
+          />
         </div>
       )}
     </>

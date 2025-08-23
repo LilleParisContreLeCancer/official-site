@@ -14,7 +14,6 @@ interface Partner {
   name: string;
   logo: string;
   url?: string;
-  level: 'or' | 'argent' | 'bronze' | 'soutien';
   description?: string;
 }
 
@@ -25,7 +24,6 @@ const partners: Partner[] = [
     name: 'Fondation de France',
     logo: '/images/partenaires/fondation-france.png',
     url: 'https://www.fondationdefrance.org',
-    level: 'or',
     description: 'Partenaire principal pour la recherche contre le cancer'
   },
   {
@@ -33,52 +31,37 @@ const partners: Partner[] = [
     name: 'EPITA',
     logo: '/images/partenaires/epita.png',
     url: 'https://www.epita.fr',
-    level: 'argent',
     description: 'École d\'ingénieurs en informatique'
   },
   {
     id: 'opal',
     name: 'OPAL',
     logo: '/images/partenaires/opal.png',
-    level: 'argent',
+    url: 'https://www.opal-ch.com/',
     description: 'Partenaire logistique et soutien'
   },
   {
     id: 'pour-mon-velo',
     name: 'Pour Mon Vélo',
     logo: '/images/partenaires/pour-mon-velo.png',
-    level: 'bronze',
+    url: 'https://www.pourmonvelo.com/',
     description: 'Équipement et maintenance vélo'
   },
   {
     id: 'latelier',
     name: 'L\'Atelier',
     logo: '/images/partenaires/latelier.png',
-    level: 'bronze',
+    url: 'https://www.instagram.com/latelier_maker/',
     description: 'Atelier de réparation et maintenance'
   },
   {
     id: 'procomm-mmc',
     name: 'PROCOMM-MMC',
-    logo: '/images/partenaires/procomm-mmc.png',
-    level: 'soutien',
+    logo: '/images/partenaires/procomm-mmc.jpg',
+    url: 'https://www.procomm-mmc.com/',
     description: 'Communication et marketing'
   }
 ];
-
-const levelColors = {
-  or: 'bg-gradient-to-r from-yellow-400 to-yellow-600',
-  argent: 'bg-gradient-to-r from-gray-300 to-gray-500',
-  bronze: 'bg-gradient-to-r from-orange-400 to-orange-600',
-  soutien: 'bg-gradient-to-r from-blue-400 to-blue-600'
-};
-
-const levelLabels = {
-  or: 'Partenaire Or',
-  argent: 'Partenaire Argent',
-  bronze: 'Partenaire Bronze',
-  soutien: 'Partenaire Soutien'
-};
 
 interface PartenairesCarouselProps {
   className?: string;
@@ -88,11 +71,11 @@ export const PartenairesCarousel = ({ className = '' }: PartenairesCarouselProps
   return (
     <div className={`w-full ${className}`}>
       <div className="text-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-primary uppercase mb-4">
+        <h2 className="text-3xl md:text-4xl font-bold text-white uppercase mb-4">
           Nos Partenaires
         </h2>
-        <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-          Ils nous font confiance et nous soutiennent dans notre mission. 
+        <p className="text-lg text-white/90 max-w-2xl mx-auto">
+          Ils nous font confiance et nous soutiennent dans notre mission.
           Ensemble, nous rendons possible cet événement exceptionnel.
         </p>
       </div>
@@ -128,11 +111,6 @@ export const PartenairesCarousel = ({ className = '' }: PartenairesCarouselProps
           {partners.map((partner) => (
             <SwiperSlide key={partner.id}>
               <div className="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 overflow-hidden h-80">
-                
-                {/* Level badge */}
-                <div className={`${levelColors[partner.level]} text-white text-xs font-bold px-3 py-1 rounded-br-lg inline-block`}>
-                  {levelLabels[partner.level]}
-                </div>
 
                 {/* Logo container */}
                 <div className="relative h-40 p-6 flex items-center justify-center bg-gray-50">
@@ -178,7 +156,7 @@ export const PartenairesCarousel = ({ className = '' }: PartenairesCarouselProps
 
       {/* CTA section */}
       <div className="text-center mt-12">
-        <p className="text-lg text-gray-700 mb-6">
+        <p className="text-lg text-white/90 mb-6">
           Vous souhaitez devenir partenaire de notre événement ?
         </p>
         <a

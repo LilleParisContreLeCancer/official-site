@@ -1,35 +1,57 @@
 [
   {
     "id": "projet-1",
-    "titre": "Recherche sur les leucémies pédiatriques",
+    "titre": "Amélioration du diagnostic précoce des cancers pédiatriques",
     "institut": "Institut Gustave Roussy",
     "logo": "/images/instituts/gustave-roussy.png",
-    "resume": "Développement de nouvelles thérapies ciblées pour les enfants atteints de leucémie.",
-    "montant": 5000,
-    "annee": 2023,
-    "lien_fondation": "https://www.fondationdefrance.org/fr/projet/recherche-leucemies-pediatriques",
+    "resume": "Développement d'outils de diagnostic moléculaire pour détecter plus tôt les cancers chez l'enfant et améliorer les chances de guérison. Ce projet vise à réduire le délai de diagnostic de 30%.",
+    "montant": 8500,
+    "annee": 2024,
+    "lien_fondation": "https://www.fondationdefrance.org/fr/cancer",
     "statut": "En cours"
   },
   {
     "id": "projet-2",
-    "titre": "Immunothérapie contre le cancer du sein",
+    "titre": "Thérapies personnalisées contre le cancer du sein",
     "institut": "Institut Curie",
     "logo": "/images/instituts/institut-curie.png",
-    "resume": "Recherche sur l'efficacité de l'immunothérapie dans le traitement du cancer du sein triple négatif.",
-    "montant": 7500,
-    "annee": 2022,
-    "lien_fondation": "https://www.fondationdefrance.org/fr/projet/immunotherapie-cancer-sein",
+    "resume": "Recherche sur les biomarqueurs pour personnaliser les traitements du cancer du sein selon le profil génétique de chaque patiente. L'objectif est d'améliorer l'efficacité thérapeutique tout en réduisant les effets secondaires.",
+    "montant": 12000,
+    "annee": 2023,
+    "lien_fondation": "https://www.fondationdefrance.org/fr/cancer",
     "statut": "Terminé"
   },
   {
     "id": "projet-3",
-    "titre": "Thérapies géniques pour les tumeurs cérébrales",
-    "institut": "ICM - Institut du Cerveau",
-    "logo": "/images/instituts/icm.png",
-    "resume": "Développement de vecteurs viraux pour cibler spécifiquement les glioblastomes.",
-    "montant": 6000,
+    "titre": "Accompagnement psychologique des familles",
+    "institut": "Ligue contre le Cancer",
+    "logo": "/images/instituts/ligue-cancer.png",
+    "resume": "Programme de soutien psychologique et social pour les patients atteints de cancer et leurs proches. Mise en place d'ateliers thérapeutiques et de groupes de parole pour améliorer la qualité de vie pendant et après les traitements.",
+    "montant": 6500,
     "annee": 2024,
-    "lien_fondation": "https://www.fondationdefrance.org/fr/projet/therapies-geniques-tumeurs-cerebrales",
+    "lien_fondation": "https://www.fondationdefrance.org/fr/cancer",
     "statut": "Nouveau"
+  },
+  {
+    "id": "projet-4",
+    "titre": "Innovation en radiothérapie de précision",
+    "institut": "Centre Léon Bérard",
+    "logo": "/images/instituts/leon-berard.png",
+    "resume": "Développement de nouvelles techniques de radiothérapie guidée par l'image pour cibler plus précisément les tumeurs tout en préservant les tissus sains. Cette approche révolutionnaire pourrait réduire de 40% les complications post-traitement.",
+    "montant": 15000,
+    "annee": 2023,
+    "lien_fondation": "https://www.fondationdefrance.org/fr/cancer",
+    "statut": "Terminé"
+  },
+  {
+    "id": "projet-5",
+    "titre": "Recherche sur les cancers rares",
+    "institut": "Institut National du Cancer",
+    "logo": "/images/instituts/inca.png",
+    "resume": "Programme de recherche dédié aux cancers rares qui touchent moins de 6 personnes sur 100 000. L'objectif est de mieux comprendre ces pathologies pour développer des traitements spécifiques et améliorer le pronostic des patients.",
+    "montant": 9200,
+    "annee": 2022,
+    "lien_fondation": "https://www.fondationdefrance.org/fr/cancer",
+    "statut": "Terminé"
   }
 ]

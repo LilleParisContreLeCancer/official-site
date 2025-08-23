@@ -1,3 +1,6 @@
+// SECTION RÉSEAUX SOCIAUX TEMPORAIREMENT DÉSACTIVÉE - CODE CONSERVÉ POUR RÉACTIVATION FUTURE
+
+/*
 'use client';
 
 import { useState } from 'react';
@@ -69,12 +72,11 @@ export const ReseauxSociaux = () => {
             Suivez-nous sur les réseaux
           </h2>
           <p className="text-xl text-white/90 max-w-3xl mx-auto">
-            Restez connectés avec notre communauté et découvrez nos dernières actualités, 
+            Restez connectés avec notre communauté et découvrez nos dernières actualités,
             événements et témoignages inspirants.
           </p>
         </div>
 
-        {/* Boutons des réseaux sociaux */}
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-12">
           {socialLinks.map((social) => (
             <SocialButton
@@ -86,15 +88,13 @@ export const ReseauxSociaux = () => {
           ))}
         </div>
 
-        {/* Contenu du réseau sélectionné */}
         <div className="bg-gray-50 rounded-2xl p-8">
-          <SocialFeed 
+          <SocialFeed
             platform={selectedPlatform}
             socialLink={socialLinks.find(s => s.platform === selectedPlatform)!}
           />
         </div>
 
-        {/* Call to action */}
         <div className="text-center mt-12">
           <div className="bg-gradient-to-r from-primary to-secondary p-8 rounded-2xl text-white">
             <h3 className="text-2xl font-bold mb-4">
@@ -121,4 +121,10 @@ export const ReseauxSociaux = () => {
       </div>
     </section>
   );
+};
+*/
+
+// Placeholder export to avoid module errors
+export const ReseauxSociaux = () => {
+  return null;
 };

@@ -30,11 +30,11 @@ const AnimatedCounter = ({ end, duration = 2000, isVisible }: AnimatedCounterPro
       const now = Date.now();
       const elapsed = now - startTime;
       const progress = Math.min(elapsed / duration, 1);
-      
+
       // Easing function pour une animation plus naturelle
       const easeOutQuart = 1 - Math.pow(1 - progress, 4);
       const currentValue = Math.floor(startValue + (end - startValue) * easeOutQuart);
-      
+
       setCount(currentValue);
 
       if (progress < 1) {
@@ -73,31 +73,32 @@ export const StatsDynamiques = () => {
     statsData.editions,
     statsData.kilometres,
     statsData.euros_recoltes,
-    statsData.participants,
-    statsData.projets_soutenus
+    statsData.participants
   ];
 
   return (
     <div ref={sectionRef} className="py-16 bg-gradient-to-br from-primary/5 to-secondary/10">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Notre Impact en Chiffres
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Depuis 2021, chaque kilomètre parcouru contribue à la recherche contre le cancer
+          <p className="text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed opacity-90">
+            Découvrez notre impact concret dans la lutte contre le cancer. Nos
+            réalisations, nos chiffres et les projets de recherche que nous
+            soutenons.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center">
           {stats.map((stat, index) => (
             <div
               key={index}
               className="text-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100"
             >
               <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
-                <AnimatedCounter 
-                  end={stat.value} 
+                <AnimatedCounter
+                  end={stat.value}
                   duration={2000 + index * 200}
                   isVisible={isVisible}
                 />
@@ -113,8 +114,8 @@ export const StatsDynamiques = () => {
         </div>
 
         <div className="text-center mt-12">
-          <p className="text-gray-600 italic">
-            Données mises à jour en temps réel • Dernière mise à jour : {new Date().toLocaleDateString('fr-FR')}
+          <p className="text-white italic">
+            Dernière mise à jour : 23/08/2025
           </p>
         </div>
       </div>

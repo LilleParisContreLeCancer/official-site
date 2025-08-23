@@ -12,12 +12,12 @@ export const Footer = () => {
               Lille Paris Contre le Cancer
             </h3>
             <p className="text-white/90 mb-6 leading-relaxed">
-              Association dédiée à la lutte contre le cancer. 
+              Association dédiée à la lutte contre le cancer.
               Ensemble, nous finançons la recherche et soutenons les patients.
             </p>
             <div className="space-y-2 text-white/80">
-              <p>📧 contact@lille-paris-contre-cancer.org</p>
-              <p>🌐 www.lille-paris-contre-cancer.org</p>
+              <p>📧 lillepariscontrelecancer@gmail.com</p>
+              <p>🌐 lillepariscontrelecancer.fr</p>
             </div>
           </div>
 

@@ -2,6 +2,7 @@ import { VideoBackground } from './VideoBackground';
 import { Accroche } from './Accroche';
 import { BoutonDon } from './BoutonDon';
 import { CompteurDons } from './CompteurDons';
+import Image from 'next/image';
 
 export const AccueilSection = () => {
   return (
@@ -36,7 +37,13 @@ export const AccueilSection = () => {
               className="bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-3 transition-all duration-300 hover:scale-110"
               aria-label="Suivez-nous sur Instagram"
             >
-              <span className="text-2xl">📸</span>
+              <Image
+                src="/images/social/instagram-logo.svg"
+                alt="Instagram"
+                width={24}
+                height={24}
+                className="text-white"
+              />
             </a>
             <a
               href="https://facebook.com/lillepariscontrelecancer"
@@ -45,7 +52,13 @@ export const AccueilSection = () => {
               className="bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-3 transition-all duration-300 hover:scale-110"
               aria-label="Suivez-nous sur Facebook"
             >
-              <span className="text-2xl">👥</span>
+              <Image
+                src="/images/social/facebook-logo.svg"
+                alt="Facebook"
+                width={24}
+                height={24}
+                className="text-white"
+              />
             </a>
             <a
               href="https://linkedin.com/company/lille-paris-contre-le-cancer"
@@ -54,7 +67,13 @@ export const AccueilSection = () => {
               className="bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-3 transition-all duration-300 hover:scale-110"
               aria-label="Suivez-nous sur LinkedIn"
             >
-              <span className="text-2xl">💼</span>
+              <Image
+                src="/images/social/linkedin-logo.svg"
+                alt="LinkedIn"
+                width={24}
+                height={24}
+                className="text-white"
+              />
             </a>
             <a
               href="https://youtube.com/@lillepariscontrelecancer"
@@ -63,7 +82,13 @@ export const AccueilSection = () => {
               className="bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-3 transition-all duration-300 hover:scale-110"
               aria-label="Suivez-nous sur YouTube"
             >
-              <span className="text-2xl">🎥</span>
+              <Image
+                src="/images/social/youtube-logo.svg"
+                alt="YouTube"
+                width={24}
+                height={24}
+                className="text-white"
+              />
             </a>
             <a
               href="https://tiktok.com/@lillepariscontrelecancer"
@@ -72,8 +97,40 @@ export const AccueilSection = () => {
               className="bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-3 transition-all duration-300 hover:scale-110"
               aria-label="Suivez-nous sur TikTok"
             >
-              <span className="text-2xl">🎵</span>
+              <Image
+                src="/images/social/tiktok-logo.svg"
+                alt="TikTok"
+                width={24}
+                height={24}
+                className="text-white"
+              />
             </a>
+          </div>
+          
+          {/* Video Button */}
+          <div className="flex justify-center mt-6">
+            <a
+              href="https://www.youtube.com/watch?v=pZ-cJe39f4w"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 rounded-full px-6 py-3 text-white font-medium transition-all duration-300 hover:scale-105 flex items-center space-x-2"
+            >
+              <Image
+                src="/images/social/youtube-logo.svg"
+                alt="YouTube"
+                width={20}
+                height={20}
+                className="text-white"
+              />
+              <span>Voir la vidéo</span>
+            </a>
+          </div>
+
+          {/* Video Credits */}
+          <div className="flex justify-center mt-4">
+            <p className="text-white/70 text-sm">
+              Vidéo par <span className="font-medium">Alexi - L'oignon pédaleur</span>
+            </p>
           </div>
           
         </div>

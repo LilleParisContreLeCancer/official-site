@@ -25,12 +25,12 @@ export const PictosSecurite = () => {
               key={index}
               className="bg-white rounded-xl p-8 shadow-lg text-center hover:shadow-xl transition-shadow duration-300"
             >
-              <div className="w-20 h-20 mx-auto mb-6 bg-gray-100 rounded-lg flex items-center justify-center">
+              <div className="w-20 h-20 mx-auto mb-6 flex items-center justify-center">
                 <Image
                   src={cert.logo}
                   alt={`Logo ${cert.nom}`}
-                  width={48}
-                  height={48}
+                  width={64}
+                  height={64}
                   className="object-contain"
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;
@@ -66,7 +66,7 @@ export const PictosSecurite = () => {
                   Protection des Données
                 </h3>
               </div>
-              
+
               <div className="space-y-4">
                 <div className="flex items-start">
                   <svg className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -108,7 +108,7 @@ export const PictosSecurite = () => {
                   Transparence Totale
                 </h3>
               </div>
-              
+
               <div className="space-y-4">
                 <div className="flex items-start">
                   <svg className="w-5 h-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -144,19 +144,40 @@ export const PictosSecurite = () => {
           <h3 className="text-xl font-bold text-gray-900 mb-6">
             Nos Partenaires de Confiance
           </h3>
-          
+
           <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
-            <div className="text-center">
+            <div className="text-center flex flex-col items-center">
+              <Image
+                src="/images/partenaires/fondation-france.png"
+                alt="Logo Fondation de France"
+                width={80}
+                height={40}
+                className="object-contain mb-2"
+              />
               <div className="text-lg font-semibold text-gray-700">Fondation de France</div>
               <div className="text-sm text-gray-500">Partenaire officiel</div>
             </div>
             <div className="w-px h-12 bg-gray-300"></div>
-            <div className="text-center">
+            <div className="text-center flex flex-col items-center">
+              <Image
+                src="/images/partenaires/sumup.png"
+                alt="Logo SumUp"
+                width={80}
+                height={40}
+                className="object-contain mb-2"
+              />
               <div className="text-lg font-semibold text-gray-700">SumUp</div>
               <div className="text-sm text-gray-500">Paiement sécurisé</div>
             </div>
             <div className="w-px h-12 bg-gray-300"></div>
-            <div className="text-center">
+            <div className="text-center flex flex-col items-center">
+              <Image
+                src="/images/partenaires/payasso.png"
+                alt="Logo PayAsso"
+                width={80}
+                height={40}
+                className="object-contain mb-2"
+              />
               <div className="text-lg font-semibold text-gray-700">PayAsso</div>
               <div className="text-sm text-gray-500">Solution associative</div>
             </div>
@@ -179,7 +200,7 @@ export const PictosSecurite = () => {
               <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
-              securite@lille-paris-contre-le-cancer.fr
+              lillepariscontrelecancer@gmail.com
             </a>
           </div>
         </div>

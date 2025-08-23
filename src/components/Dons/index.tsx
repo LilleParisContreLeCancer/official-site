@@ -11,7 +11,7 @@ export const Dons = () => {
             Faire un Don
           </h1>
           <p className="text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed opacity-90">
-            Soutenez la recherche contre le cancer ou notre association. 
+            Soutenez la recherche contre le cancer ou notre association.
             Chaque don compte et bénéficie d'avantages fiscaux de 66%.
           </p>
         </div>
@@ -28,20 +28,19 @@ export const Dons = () => {
               Choisissez Votre Type de Don
             </h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-              Nous vous proposons deux façons de nous soutenir, chacune avec ses spécificités. 
-              Les deux bénéficient de 66% de déduction fiscale.
+              Nous vous proposons deux façons de nous soutenir, chacune avec ses spécificités.
             </p>
           </div>
 
           {/* Deux options de don côte à côte */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-            
+
             {/* Don pour la recherche */}
             <div className="bg-white rounded-2xl shadow-xl p-8 text-center relative overflow-hidden">
               <div className="absolute top-0 right-0 bg-green-500 text-white px-4 py-2 rounded-bl-lg text-sm font-bold">
                 66% déductible
               </div>
-              
+
               <div className="mb-6">
                 <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -54,10 +53,10 @@ export const Dons = () => {
               </div>
 
               <div className="mb-8">
-                <Image 
-                  src="/images/fondation-france-logo.svg" 
-                  alt="Logo Fondation de France" 
-                  width={200} 
+                <Image
+                  src="/images/fondation-france-logo.png"
+                  alt="Logo Fondation de France"
+                  width={200}
                   height={80}
                   className="mx-auto mb-4"
                 />
@@ -80,12 +79,13 @@ export const Dons = () => {
                   <svg className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span>Soutient 15 projets de recherche par an</span>
+                  <span>
+                    La Fondation de France soutient la recherche fondamentale et translationnelle portant sur l’étude des résistances aux traitements du cancer</span>
                 </div>
               </div>
 
               <a
-                href="https://www.fondationdefrance.org/fr/faire-un-don/lille-paris-contre-le-cancer"
+                href="https://lpcc.pagefondationdefrance.org/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full inline-flex items-center justify-center px-8 py-4 bg-primary text-white font-bold text-lg rounded-lg hover:bg-primary/90 transition-colors shadow-lg"
@@ -99,10 +99,7 @@ export const Dons = () => {
 
             {/* Don pour l'association */}
             <div className="bg-white rounded-2xl shadow-xl p-8 text-center relative overflow-hidden">
-              <div className="absolute top-0 right-0 bg-green-500 text-white px-4 py-2 rounded-bl-lg text-sm font-bold">
-                66% déductible
-              </div>
-              
+
               <div className="mb-6">
                 <div className="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mx-auto mb-4">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -115,13 +112,13 @@ export const Dons = () => {
               </div>
 
               <div className="mb-8">
-                <div className="w-32 h-32 bg-primary rounded-full mx-auto flex items-center justify-center mb-4">
-                  <div className="text-center text-white">
-                    <div className="font-bold text-sm mb-1">LILLE-PARIS</div>
-                    <div className="text-2xl mb-1">🎗️</div>
-                    <div className="font-bold text-xs">CONTRE LE CANCER</div>
-                  </div>
-                </div>
+                <Image
+                  src="/images/logo.png"
+                  alt="Logo Lille Paris Contre le Cancer"
+                  width={120}
+                  height={120}
+                  className="mx-auto mb-4 rounded-full"
+                />
               </div>
 
               <div className="text-gray-700 mb-8 space-y-3">
@@ -146,12 +143,14 @@ export const Dons = () => {
               </div>
 
               <a
-                href="mailto:contact@lille-paris-contre-le-cancer.fr?subject=Don pour l'association LPCC"
-                className="w-full inline-flex items-center justify-center px-8 py-4 bg-secondary text-white font-bold text-lg rounded-lg hover:bg-secondary/90 transition-colors shadow-lg"
+                href="https://www.payasso.fr/lille-paris-contre-le-cancer/dons"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full inline-flex items-center justify-center px-8 py-4 bg-primary text-white font-bold text-lg rounded-lg hover:bg-primary/90 transition-colors shadow-lg"
               >
-                Contacter pour don association
+                Donner pour la logistique de nos événements
                 <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                 </svg>
               </a>
             </div>

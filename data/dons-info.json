@@ -9,7 +9,7 @@
         "Impact direct sur la recherche",
         "Transparence totale via Fondation de France"
       ],
-      "lien_don": "https://www.fondationdefrance.org/fr/faire-un-don/lille-paris-contre-le-cancer",
+      "lien_don": "https://lpcc.pagefondationdefrance.org/",
       "couleur": "primary"
     },
     "logistique": {
@@ -29,9 +29,21 @@
     "taux_deduction": 0.66,
     "plafond_deduction": 20,
     "exemples": [
-      { "montant": 50, "deduction": 33, "cout_net": 17 },
-      { "montant": 100, "deduction": 66, "cout_net": 34 },
-      { "montant": 200, "deduction": 132, "cout_net": 68 }
+      {
+        "montant": 50,
+        "deduction": 33,
+        "cout_net": 17
+      },
+      {
+        "montant": 100,
+        "deduction": 66,
+        "cout_net": 34
+      },
+      {
+        "montant": 200,
+        "deduction": 132,
+        "cout_net": 68
+      }
     ]
   },
   "securite": {
@@ -39,17 +51,17 @@
       {
         "nom": "SSL",
         "description": "Connexion sécurisée",
-        "logo": "/images/securite/ssl.png"
+        "logo": "/images/security/ssl-logo.svg"
       },
       {
         "nom": "PCI DSS",
         "description": "Norme de sécurité des données",
-        "logo": "/images/securite/pci.png"
+        "logo": "/images/security/pci-dss-logo.svg"
       },
       {
         "nom": "Cartes bancaires",
         "description": "Paiement sécurisé",
-        "logo": "/images/securite/cb.png"
+        "logo": "/images/security/cartes-bancaires-logo.svg"
       }
     ]
   },

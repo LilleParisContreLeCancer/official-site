@@ -5,23 +5,18 @@
     "description": "Depuis 2021"
   },
   "kilometres": {
-    "value": 1200,
+    "value": 1087,
     "label": "Kilomètres parcourus",
     "description": "Au total depuis le début"
   },
   "euros_recoltes": {
-    "value": 18500,
+    "value": 10530,
     "label": "Euros récoltés",
     "description": "Pour la recherche contre le cancer"
   },
   "participants": {
-    "value": 45,
+    "value": 30,
     "label": "Participants",
     "description": "Cyclistes et bénévoles cumulés"
-  },
-  "projets_soutenus": {
-    "value": 3,
-    "label": "Projets soutenus",
-    "description": "Via la Fondation de France"
   }
 }
