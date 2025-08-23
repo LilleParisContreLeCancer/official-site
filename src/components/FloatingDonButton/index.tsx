@@ -44,16 +44,18 @@ export const FloatingDonButton = () => {
   const handleMouseMove = useCallback((e: MouseEvent) => {
     if (!isDragging) return;
 
-    const newX = e.clientX - dragStart.x;
-    const newY = e.clientY - dragStart.y;
+    requestAnimationFrame(() => {
+      const newX = e.clientX - dragStart.x;
+      const newY = e.clientY - dragStart.y;
 
-    // Limiter le bouton aux bords de l'écran
-    const maxX = window.innerWidth - 80; // 80px = largeur approximative du bouton
-    const maxY = window.innerHeight - 80; // 80px = hauteur approximative du bouton
+      // Limiter le bouton aux bords de l'écran
+      const maxX = window.innerWidth - 80; // 80px = largeur approximative du bouton
+      const maxY = window.innerHeight - 80;
 
-    setPosition({
-      x: Math.max(0, Math.min(newX, maxX)),
-      y: Math.max(0, Math.min(newY, maxY))
+      setPosition({
+        x: Math.max(0, Math.min(newX, maxX)),
+        y: Math.max(0, Math.min(newY, maxY))
+      });
     });
   }, [isDragging, dragStart.x, dragStart.y]);
 
@@ -73,18 +75,21 @@ export const FloatingDonButton = () => {
 
   const handleTouchMove = useCallback((e: TouchEvent) => {
     if (!isDragging) return;
-    e.preventDefault();
-
-    const touch = e.touches[0];
-    const newX = touch.clientX - dragStart.x;
-    const newY = touch.clientY - dragStart.y;
-
-    const maxX = window.innerWidth - 80;
-    const maxY = window.innerHeight - 80;
-
-    setPosition({
-      x: Math.max(20, Math.min(newX, maxX)),
-      y: Math.max(20, Math.min(newY, maxY))
+    e.preventDefault(); // Prevent scrolling
+    
+    requestAnimationFrame(() => {
+      const touch = e.touches[0];
+      const newX = touch.clientX - dragStart.x;
+      const newY = touch.clientY - dragStart.y;
+      
+      // Contraintes pour rester dans la fenêtre
+      const maxX = window.innerWidth - 80;
+      const maxY = window.innerHeight - 80;
+      
+      setPosition({
+        x: Math.max(0, Math.min(newX, maxX)),
+        y: Math.max(0, Math.min(newY, maxY))
+      });
     });
   }, [isDragging, dragStart.x, dragStart.y]);
 

@@ -1,9 +1,9 @@
 'use client';
 
 import { useState, useCallback } from 'react';
-import Image from 'next/image';
 import Lightbox from 'yet-another-react-lightbox';
 import 'yet-another-react-lightbox/styles.css';
+import { OptimizedImage } from '@/components/ui/OptimizedImage';
 
 interface Photo {
   id: string;
@@ -178,16 +178,13 @@ export const GaleriePhotos = () => {
                 className="group relative aspect-square bg-gray-200 rounded-lg overflow-hidden cursor-pointer hover:shadow-lg transition-shadow duration-300"
                 onClick={() => openLightbox(index)}
               >
-                <Image
+                <OptimizedImage
                   src={photo.src}
                   alt={photo.alt}
                   fill
+                  quality="MEDIUM"
+                  sizes="CARD"
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
-                  onError={(e) => {
-                    const target = e.target as HTMLImageElement;
-                    target.src = '/images/placeholder-photo.jpg';
-                  }}
                 />
 
                 {/* Overlay avec titre */}

@@ -1,6 +1,6 @@
 'use client';
 
-import Image from 'next/image';
+import { OptimizedImage } from '@/components/ui/OptimizedImage';
 import { useState } from 'react';
 
 interface TeamMember {
@@ -71,12 +71,13 @@ export const Portraits = ({ className = '' }: PortraitsProps) => {
           >
             {/* Image container */}
             <div className="relative w-full h-64 overflow-hidden">
-              <Image
+              <OptimizedImage
                 src={member.image}
                 alt={`Portrait de ${member.name}, ${member.role} de LPCC`}
                 fill
+                quality="HIGH"
+                sizes="PORTRAIT"
                 className="object-cover transition-transform duration-300 group-hover:scale-110"
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
               />
 
               {/* Overlay on hover */}

@@ -4,8 +4,26 @@
 'use client';
 
 import { useState } from 'react';
-import { SocialButton } from './SocialButton';
+import dynamic from 'next/dynamic';
 import { SocialFeed } from './SocialFeed';
+
+// Lazy load YouTube component to reduce initial bundle size
+const YouTubeFeed = dynamic(() => import('./YouTubeFeed').then(mod => ({ default: mod.YouTubeFeed })), {
+  loading: () => (
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {[...Array(3)].map((_, i) => (
+        <div key={i} className="bg-white rounded-xl overflow-hidden shadow-lg animate-pulse">
+          <div className="aspect-video bg-gray-200"></div>
+          <div className="p-4">
+            <div className="h-4 bg-gray-200 rounded mb-2"></div>
+            <div className="h-3 bg-gray-200 rounded w-2/3"></div>
+          </div>
+        </div>
+      ))}
+    </div>
+  ),
+  ssr: false
+});
 
 export type SocialPlatform = 'instagram' | 'facebook' | 'linkedin' | 'youtube' | 'tiktok';
 

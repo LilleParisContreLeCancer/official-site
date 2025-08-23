@@ -13,8 +13,8 @@ interface CompteurDonsProps {
 }
 
 export const CompteurDons = ({ className = '' }: CompteurDonsProps) => {
-  const [donData, setDonData] = useState<DonData>({ current: 0, goal: 5000, source: 'loading' });
-  const [animatedCurrent, setAnimatedCurrent] = useState(0);
+  const [donData, setDonData] = useState<DonData>({ current: 1250, goal: 5000, source: 'loading' });
+  const [animatedCurrent, setAnimatedCurrent] = useState(1250);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -66,27 +66,43 @@ export const CompteurDons = ({ className = '' }: CompteurDonsProps) => {
 
   if (isLoading) {
     return (
-      <div className={`bg-black/50 backdrop-blur-sm rounded-2xl p-6 text-white text-center ${className}`}>
-        <div className="animate-pulse">
-          <div className="h-4 bg-white/20 rounded mb-2"></div>
-          <div className="h-8 bg-white/20 rounded mb-4"></div>
-          <div className="h-2 bg-white/20 rounded"></div>
+      <div className={`bg-gradient-to-br from-primary to-secondary text-white p-6 rounded-2xl shadow-xl ${className}`}>
+        <h3 className="text-xl font-bold mb-4 text-center">
+          🎯 Objectif de collecte
+        </h3>
+        
+        <div className="text-center mb-6">
+          <div className="text-4xl font-bold mb-2 h-12 flex items-center justify-center">
+            <div className="animate-pulse bg-white/20 rounded h-8 w-32"></div>
+          </div>
+          <div className="text-lg opacity-90 h-6 flex items-center justify-center">
+            <div className="animate-pulse bg-white/20 rounded h-4 w-40"></div>
+          </div>
+        </div>
+
+        {/* Progress bar skeleton */}
+        <div className="w-full bg-white/20 rounded-full h-3 mb-4 overflow-hidden">
+          <div className="animate-pulse bg-white/30 h-full rounded-full w-1/4"></div>
+        </div>
+
+        <div className="text-sm opacity-90 h-5 flex items-center justify-center">
+          <div className="animate-pulse bg-white/20 rounded h-3 w-24"></div>
         </div>
       </div>
     );
   }
 
   return (
-    <div className={`bg-black/50 backdrop-blur-sm rounded-2xl p-6 text-white text-center max-w-md mx-auto ${className}`}>
-      <h3 className="text-lg md:text-xl font-semibold mb-2 uppercase">
-        Objectif 2025
+    <div className={`bg-gradient-to-br from-primary to-secondary text-white p-6 rounded-2xl shadow-xl ${className}`}>
+      <h3 className="text-xl font-bold mb-4 text-center">
+        🎯 Objectif de collecte
       </h3>
       
-      <div className="mb-4">
-        <div className="text-3xl md:text-4xl font-bold text-accent mb-1">
+      <div className="text-center mb-6">
+        <div className="text-4xl font-bold mb-2 h-12 flex items-center justify-center">
           {animatedCurrent.toLocaleString('fr-FR')} €
         </div>
-        <div className="text-sm opacity-75">
+        <div className="text-lg opacity-90 h-6 flex items-center justify-center">
           sur {donData.goal.toLocaleString('fr-FR')} € collectés
         </div>
       </div>
@@ -99,7 +115,7 @@ export const CompteurDons = ({ className = '' }: CompteurDonsProps) => {
         ></div>
       </div>
 
-      <div className="text-sm opacity-90">
+      <div className="text-sm opacity-90 h-5 flex items-center justify-center">
         <span className="font-semibold">{Math.round(percentage)}%</span> de l&apos;objectif atteint
       </div>
 

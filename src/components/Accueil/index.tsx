@@ -1,8 +1,20 @@
 import { VideoBackground } from './VideoBackground';
 import { Accroche } from './Accroche';
 import { BoutonDon } from './BoutonDon';
-import { CompteurDons } from './CompteurDons';
+import dynamic from 'next/dynamic';
 import Image from 'next/image';
+
+// Lazy load heavy components
+const CompteurDons = dynamic(() => import('./CompteurDons').then(mod => ({ default: mod.CompteurDons })), {
+  loading: () => (
+    <div className="bg-gradient-to-br from-primary to-secondary text-white p-6 rounded-2xl shadow-xl animate-pulse">
+      <div className="h-4 bg-white/20 rounded mb-4"></div>
+      <div className="h-8 bg-white/20 rounded mb-4"></div>
+      <div className="h-3 bg-white/20 rounded"></div>
+    </div>
+  ),
+  ssr: false
+});
 
 export const AccueilSection = () => {
   return (
@@ -42,7 +54,8 @@ export const AccueilSection = () => {
                 alt="Instagram"
                 width={24}
                 height={24}
-                className="text-white"
+                className="opacity-80 group-hover:opacity-100 transition-opacity"
+                priority
               />
             </a>
             <a
