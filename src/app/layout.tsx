@@ -2,14 +2,19 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'LPCC - La Petite Caravane du Coeur',
-  description: 'Association humanitaire qui organise des convois solidaires pour aider les populations en difficulté. Rejoignez-nous pour faire la différence.',
-  keywords: 'association, humanitaire, solidarité, convoi, aide, don, bénévolat',
+  title: 'Lille-Paris contre le cancer',
+  description: 'Association caritative qui lutte contre le cancer par le sport. Soutenez la recherche médicale en rejoignant notre aventure cycliste solidaire.',
+  keywords: 'association, cancer, solidarité, fondation de france, aide, don, bénévolat, cyclisme, recherche médicale',
   authors: [{ name: 'LPCC' }],
   openGraph: {
-    title: 'LPCC - La Petite Caravane du Coeur',
-    description: 'Association humanitaire qui organise des convois solidaires pour aider les populations en difficulté.',
+    title: 'Lille-Paris contre le cancer',
+    description: 'Association caritative qui lutte contre le cancer par le sport. Soutenez la recherche médicale.',
     type: 'website',
+  },
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon-16x16.png',
+    apple: '/apple-touch-icon.png',
   },
 };
 
@@ -25,6 +30,10 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.youtube.com" />
         <link rel="dns-prefetch" href="https://formspree.io" />
+        <link rel="icon" href="/images/logo.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/images/logo.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <meta name="theme-color" content="#8B5CF6" />
       </head>
       <body className={'antialiased'}>
         {children}
