@@ -1,10 +1,12 @@
 'use client';
 
 import { useState } from 'react';
+import { useForm, ValidationError } from '@formspree/react';
 
 interface NewsletterFormData {
   email: string;
   prenom: string;
+  nom: string;
   consentement: boolean;
 }
 
@@ -12,10 +14,13 @@ export const FormulaireNewsletter = () => {
   const [formData, setFormData] = useState<NewsletterFormData>({
     email: '',
     prenom: '',
+    nom: '',
     consentement: false
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [message, setMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
+
+  // Utilisation du hook officiel Formspree avec l'ID depuis .env.local
+  const formspreeId = process.env.NEXT_PUBLIC_FORMSPREE_ID || '';
+  const [state, handleSubmit] = useForm(formspreeId);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, checked } = e.target;
@@ -25,52 +30,22 @@ export const FormulaireNewsletter = () => {
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     
     if (!formData.email || !formData.consentement) {
-      setMessage({
-        type: 'error',
-        text: 'Veuillez renseigner votre email et accepter les conditions RGPD.'
-      });
       return;
     }
 
-    setIsSubmitting(true);
-    setMessage(null);
-
-    try {
-      const response = await fetch('/api/newsletter', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-
-      const result = await response.json();
-
-      if (response.ok) {
-        setMessage({
-          type: 'success',
-          text: 'Merci ! Vérifiez votre email pour confirmer votre inscription.'
-        });
-        setFormData({ email: '', prenom: '', consentement: false });
-      } else {
-        setMessage({
-          type: 'error',
-          text: result.error || 'Une erreur est survenue. Veuillez réessayer.'
-        });
-      }
-    } catch (error) {
-      setMessage({
-        type: 'error',
-        text: 'Erreur de connexion. Veuillez réessayer plus tard.'
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
+    handleSubmit(e);
   };
+
+  // Réinitialiser le formulaire après succès
+  if (state.succeeded) {
+    setTimeout(() => {
+      setFormData({ email: '', prenom: '', nom: '', consentement: false });
+    }, 100);
+  }
 
   return (
     <div className="w-full max-w-md mx-auto bg-white p-6 rounded-lg shadow-lg">
@@ -83,7 +58,16 @@ export const FormulaireNewsletter = () => {
         </p>
       </div>
 
-      <form onSubmit={handleSubmit} className="space-y-4">
+      {state.succeeded ? (
+        <div className="text-center p-6">
+          <div className="text-green-600 text-5xl mb-4">✅</div>
+          <h4 className="text-xl font-bold text-green-800 mb-2">Merci !</h4>
+          <p className="text-green-700">
+            Votre inscription a été enregistrée avec succès. Vous recevrez bientôt nos actualités !
+          </p>
+        </div>
+      ) : (
+        <form onSubmit={onSubmit} className="space-y-4">
         {/* Email - Obligatoire */}
         <div>
           <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
@@ -117,6 +101,22 @@ export const FormulaireNewsletter = () => {
           />
         </div>
 
+        {/* Nom - Optionnel */}
+        <div>
+          <label htmlFor="nom" className="block text-sm font-medium text-gray-700 mb-1">
+            Nom <span className="text-gray-400">(optionnel)</span>
+          </label>
+          <input
+            type="text"
+            id="nom"
+            name="nom"
+            value={formData.nom}
+            onChange={handleInputChange}
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+            placeholder="Votre nom"
+          />
+        </div>
+
         {/* Consentement RGPD - Obligatoire */}
         <div className="flex items-start space-x-3">
           <input
@@ -137,28 +137,17 @@ export const FormulaireNewsletter = () => {
           </label>
         </div>
 
-        {/* Message de retour */}
-        {message && (
-          <div className={`p-3 rounded-md text-sm ${
-            message.type === 'success' 
-              ? 'bg-green-50 text-green-800 border border-green-200' 
-              : 'bg-red-50 text-red-800 border border-red-200'
-          }`}>
-            {message.text}
-          </div>
-        )}
-
         {/* Bouton de soumission */}
         <button
           type="submit"
-          disabled={isSubmitting || !formData.email || !formData.consentement}
+          disabled={state.submitting || !formData.email || !formData.consentement}
           className={`w-full py-3 px-4 rounded-md font-medium transition-colors ${
-            isSubmitting || !formData.email || !formData.consentement
+            state.submitting || !formData.email || !formData.consentement
               ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
               : 'bg-primary text-white hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2'
           }`}
         >
-          {isSubmitting ? (
+          {state.submitting ? (
             <span className="flex items-center justify-center">
               <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                 <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
@@ -170,14 +159,27 @@ export const FormulaireNewsletter = () => {
             "S'inscrire à la newsletter"
           )}
         </button>
+
+        {/* Validation Errors */}
+        <ValidationError 
+          prefix="Email" 
+          field="email"
+          errors={state.errors}
+        />
+        <ValidationError 
+          prefix="Message" 
+          field="message"
+          errors={state.errors}
+        />
       </form>
+      )}
 
       {/* Informations RGPD */}
       <div className="mt-4 p-3 bg-gray-50 rounded-md">
         <p className="text-xs text-gray-600">
-          <strong>🔒 Vos données sont protégées :</strong> Nous utilisons Mailchimp pour gérer notre newsletter. 
-          Vos données ne sont jamais vendues et vous pouvez vous désinscrire à tout moment. 
-          Conformité RGPD garantie.
+          <strong>🔒 Vos données sont protégées :</strong> Nous utilisons Formspree pour collecter vos données de manière sécurisée. 
+          Vos informations sont directement envoyées dans nos contacts Google et ne sont jamais vendues. 
+          Vous pouvez demander leur suppression à tout moment. Conformité RGPD garantie.
         </p>
       </div>
     </div>

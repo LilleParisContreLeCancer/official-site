@@ -1,51 +1,55 @@
-# 📧 Configuration Newsletter RGPD
+# 📧 Configuration Newsletter RGPD avec Formspree
 
 ## 🔒 Variables d'environnement requises
 
-Pour activer la newsletter, vous devez configurer les variables suivantes dans votre fichier `.env.local` (jamais dans le repo public) :
+Pour activer la newsletter, vous devez configurer la variable suivante dans votre fichier `.env.local` :
 
 ```bash
-# Configuration Mailchimp
-MAILCHIMP_API_KEY=your_mailchimp_api_key_here
-MAILCHIMP_LIST_ID=your_mailchimp_list_id_here
-MAILCHIMP_SERVER_PREFIX=us1  # ou us2, us3, etc. selon votre compte
+# Configuration Formspree (gratuit jusqu'à 50 soumissions/mois)
+NEXT_PUBLIC_FORMSPREE_ID=your_formspree_form_id
 
-# Exemple complet :
-# MAILCHIMP_API_KEY=abc123def456-us1
-# MAILCHIMP_LIST_ID=1234567890
-# MAILCHIMP_SERVER_PREFIX=us1
+# Exemple :
+# NEXT_PUBLIC_FORMSPREE_ID=xpzgkqyw
 ```
 
-## 🚀 Configuration Mailchimp
+## 🚀 Configuration Formspree
 
-### 1. Créer un compte Mailchimp
-- Aller sur [mailchimp.com](https://mailchimp.com)
-- Créer un compte gratuit (jusqu'à 500 contacts)
+### 1. Créer un compte Formspree
+- Aller sur [formspree.io](https://formspree.io)
+- Créer un compte gratuit (50 soumissions/mois)
 
-### 2. Obtenir l'API Key
-1. Aller dans **Account & Billing** > **Extras** > **API Keys**
-2. Cliquer sur **Create A Key**
-3. Copier la clé générée (format: `abc123def456-us1`)
+### 2. Créer un nouveau formulaire
+1. Cliquer sur **New Form**
+2. Nommer le formulaire "Newsletter LPCC"
+3. Configurer l'email de destination : `lillepariscontrelecancer@gmail.com`
+4. Copier l'ID du formulaire (ex: `xpzgkqyw`)
 
-### 3. Créer une liste (Audience)
-1. Aller dans **Audience** > **All contacts**
-2. Cliquer sur **Create Audience**
-3. Remplir les informations de votre association
-4. Noter l'**Audience ID** (dans Settings > Audience name and defaults)
+### 3. Configurer les notifications
+1. Dans les paramètres du formulaire, configurer l'email de notification
+2. Activer les notifications pour recevoir chaque inscription
+3. Optionnel : configurer un webhook pour intégration avancée
 
-### 4. Identifier le Server Prefix
-- Dans votre API Key, la partie après le tiret est votre server prefix
-- Exemple : `abc123def456-us1` → server prefix = `us1`
+### 4. Ajouter l'ID dans votre projet
+1. Copier l'ID du formulaire Formspree
+2. L'ajouter dans `.env.local` : `NEXT_PUBLIC_FORMSPREE_ID=votre_id`
+3. Redémarrer votre serveur de développement
 
 ## ✅ Fonctionnalités RGPD incluses
 
-### Double Opt-in automatique
-- L'inscription est en statut `pending` jusqu'à confirmation email
-- Mailchimp envoie automatiquement l'email de confirmation
-- L'utilisateur doit cliquer sur le lien pour finaliser l'inscription
+### Collecte sécurisée
+- Les données sont envoyées directement à votre email via Formspree
+- Aucun stockage local dans le code source (repo public)
+- Conformité RGPD automatique
 
 ### Consentement explicite
 - Checkbox RGPD obligatoire dans le formulaire
+- Lien vers la politique de confidentialité
+- Information claire sur l'utilisation des données
+
+### Gestion des contacts
+- Réception directe dans votre boîte email
+- Possibilité d'importer dans Google Contacts
+- Facilité de suppression sur demande
 - Lien vers la politique de confidentialité
 - Information claire sur l'utilisation des données
 
