@@ -12,7 +12,7 @@ export const Dons = () => {
           </h1>
           <p className="text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed opacity-90">
             Soutenez la recherche contre le cancer ou notre association.
-            Chaque don compte et bénéficie d'avantages fiscaux de 66%.
+            Chaque don compte et bénéficie d&apos;avantages fiscaux de 66%.
           </p>
         </div>
       </div>
@@ -107,7 +107,7 @@ export const Dons = () => {
                   </svg>
                 </div>
                 <h3 className="text-2xl font-bold text-secondary mb-4">
-                  Don pour l'Association
+                  Don pour l&apos;Association
                 </h3>
               </div>
 
@@ -165,7 +165,7 @@ export const Dons = () => {
               <div>
                 <h4 className="text-blue-800 font-bold mb-2">Important à savoir</h4>
                 <p className="text-blue-700 text-sm mb-2">
-                  <strong>Déduction fiscale :</strong> 66% de réduction d'impôt dans la limite de 20% de votre revenu imposable.
+                  <strong>Déduction fiscale :</strong> 66% de réduction d&apos;impôt dans la limite de 20% de votre revenu imposable.
                 </p>
                 <p className="text-blue-700 text-sm">
                   <strong>Exemple :</strong> Un don de 100€ ne vous coûte réellement que 34€ après déduction fiscale.

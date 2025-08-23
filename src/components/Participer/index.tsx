@@ -68,7 +68,7 @@ export const ParticiperSection = () => {
             </h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto">
               Chaque participation compte dans notre lutte contre le cancer.
-              Ensemble, nous transformons l'engagement sportif en espoir médical.
+              Ensemble, nous transformons l&apos;engagement sportif en espoir médical.
             </p>
           </div>
 

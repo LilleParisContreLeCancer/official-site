@@ -178,7 +178,7 @@ export const SimulateurFiscal = () => {
                     </p>
                     <p className="text-blue-700 text-sm">
                       La déduction fiscale est limitée à {simulateur.plafond_deduction}% de votre revenu imposable. 
-                      L'excédent peut être reporté sur les 5 années suivantes.
+                      L&apos;excédent peut être reporté sur les 5 années suivantes.
                     </p>
                   </div>
                 </div>

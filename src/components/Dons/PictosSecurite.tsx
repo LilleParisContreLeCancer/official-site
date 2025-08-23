@@ -89,7 +89,7 @@ export const PictosSecurite = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   <span className="text-gray-700">
-                    <strong>RGPD</strong> : Respect total de la réglementation sur la protection des données
+                    Vos données personnelles sont protégées et ne seront jamais partagées avec des tiers sans votre consentement explicite. Nous respectons strictement les réglementations RGPD en vigueur.
                   </span>
                 </div>
               </div>
@@ -123,7 +123,7 @@ export const PictosSecurite = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2h-2a2 2 0 00-2-2z" />
                   </svg>
                   <span className="text-gray-700">
-                    <strong>Suivi des projets</strong> : Rapports réguliers sur l'utilisation des fonds
+                    <strong>Suivi des projets</strong> : Rapports réguliers sur l&apos;utilisation des fonds
                   </span>
                 </div>
                 <div className="flex items-start">

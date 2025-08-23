@@ -26,7 +26,7 @@ export const ProjetsSoutenus = () => {
                 Découvrez tous les projets de recherche
               </h3>
               <p className="text-gray-600 mb-6">
-                Consultez l'ensemble des projets de recherche contre le cancer 
+                Consultez l&apos;ensemble des projets de recherche contre le cancer 
                 financés par la Fondation de France et soutenus par nos dons.
               </p>
             </div>

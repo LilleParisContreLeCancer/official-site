@@ -30,9 +30,9 @@ export default function PolitiqueConfidentialite() {
               <div className="bg-gray-50 p-6 rounded-lg mb-4">
                 <h3 className="text-lg font-semibold mb-3">Newsletter :</h3>
                 <ul className="list-disc list-inside text-gray-700 space-y-2">
-                  <li><strong>Email</strong> : obligatoire pour l'envoi de la newsletter</li>
+                  <li><strong>Email</strong> : obligatoire pour l&apos;envoi de la newsletter</li>
                   <li><strong>Prénom</strong> : optionnel, pour personnaliser nos communications</li>
-                  <li><strong>Date d'inscription</strong> : automatique, pour le suivi de nos abonnés</li>
+                  <li><strong>Date d&apos;inscription</strong> : automatique, pour le suivi de nos abonnés</li>
                   <li><strong>Consentement</strong> : preuve de votre accord pour recevoir nos communications</li>
                 </ul>
               </div>
@@ -80,7 +80,7 @@ export default function PolitiqueConfidentialite() {
               <h2 className="text-2xl font-bold text-primary mb-4">7. Vos droits</h2>
               <div className="grid md:grid-cols-2 gap-4">
                 <div className="bg-green-50 p-4 rounded-lg">
-                  <h3 className="font-semibold text-green-800 mb-2">✅ Droit d'accès</h3>
+                  <h3 className="font-semibold text-green-800 mb-2">✅ Droit d&apos;accès</h3>
                   <p className="text-sm text-green-700">Connaître les données que nous détenons sur vous</p>
                 </div>
                 <div className="bg-blue-50 p-4 rounded-lg">
@@ -88,7 +88,7 @@ export default function PolitiqueConfidentialite() {
                   <p className="text-sm text-blue-700">Corriger vos données inexactes</p>
                 </div>
                 <div className="bg-red-50 p-4 rounded-lg">
-                  <h3 className="font-semibold text-red-800 mb-2">🗑️ Droit à l'effacement</h3>
+                  <h3 className="font-semibold text-red-800 mb-2">🗑️ Droit à l&apos;effacement</h3>
                   <p className="text-sm text-red-700">Demander la suppression de vos données</p>
                 </div>
                 <div className="bg-purple-50 p-4 rounded-lg">
@@ -137,7 +137,7 @@ export default function PolitiqueConfidentialite() {
               <h2 className="text-2xl font-bold text-primary mb-4">11. Réclamations</h2>
               <p className="text-gray-700 leading-relaxed">
                 Si vous estimez que vos droits ne sont pas respectés, vous pouvez introduire une réclamation 
-                auprès de la Commission Nationale de l'Informatique et des Libertés (CNIL) : 
+                auprès de la Commission Nationale de l&apos;Informatique et des Libertés (CNIL) : 
                 <a href="https://www.cnil.fr" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">
                   www.cnil.fr
                 </a>
@@ -147,7 +147,7 @@ export default function PolitiqueConfidentialite() {
             <div className="bg-primary text-white p-6 rounded-lg text-center">
               <h3 className="text-xl font-bold mb-2">🛡️ Notre engagement</h3>
               <p>
-                Lille Paris Contre le Cancer s'engage à respecter votre vie privée et à protéger vos données personnelles 
+                Lille Paris Contre le Cancer s&apos;engage à respecter votre vie privée et à protéger vos données personnelles 
                 conformément aux réglementations en vigueur.
               </p>
             </div>

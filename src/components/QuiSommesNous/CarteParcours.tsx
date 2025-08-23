@@ -19,7 +19,7 @@ export const CarteParcours = ({ className = '' }: CarteParcoursProps) => {
           Notre Parcours
         </h2>
         <p className="text-xl text-white/90 max-w-4xl mx-auto leading-relaxed">
-          Découvrez l'itinéraire de notre périple de Lille à Paris,
+          Découvrez l&apos;itinéraire de notre périple de Lille à Paris,
           un parcours de plus de 300 kilomètres au service de la recherche contre le cancer.
         </p>
 
@@ -137,8 +137,8 @@ export const CarteParcours = ({ className = '' }: CarteParcoursProps) => {
               </div>
             </div>
             <p className="text-sm text-gray-700">
-              L'arrivée se fera au pied de la Tour Eiffel, monument emblématique
-              qui marquera l'aboutissement de notre défi sportif et solidaire.
+              L&apos;arrivée se fera au pied de la Tour Eiffel, monument emblématique
+              qui marquera l&apos;aboutissement de notre défi sportif et solidaire.
             </p>
           </div>
         </div>

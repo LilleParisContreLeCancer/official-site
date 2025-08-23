@@ -129,7 +129,7 @@ export const AccueilSection = () => {
           {/* Video Credits */}
           <div className="flex justify-center mt-4">
             <p className="text-white/70 text-sm">
-              Vidéo par <span className="font-medium">Alexi - L'oignon pédaleur</span>
+              Vidéo par <span className="font-medium">Alexi - L&apos;oignon pédaleur</span>
             </p>
           </div>
           

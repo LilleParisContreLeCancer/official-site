@@ -60,7 +60,7 @@ export const CompteurDons = ({ className = '' }: CompteurDonsProps) => {
     }, duration / steps);
 
     return () => clearInterval(timer);
-  }, [donData.current, isLoading]);
+  }, [donData, isLoading]);
 
   const percentage = Math.min((donData.current / donData.goal) * 100, 100);
 
@@ -100,7 +100,7 @@ export const CompteurDons = ({ className = '' }: CompteurDonsProps) => {
       </div>
 
       <div className="text-sm opacity-90">
-        <span className="font-semibold">{Math.round(percentage)}%</span> de l'objectif atteint
+        <span className="font-semibold">{Math.round(percentage)}%</span> de l&apos;objectif atteint
       </div>
 
       {/* Small indicator of data source for debugging */}

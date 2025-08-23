@@ -241,7 +241,7 @@ export const GaleriePhotos = () => {
         <div className="text-center mt-8 p-4 bg-white rounded-lg border border-gray-200">
           <p className="text-sm text-gray-600">
             {filteredPhotos.length} photo{filteredPhotos.length > 1 ? 's' : ''} •
-            Cliquez sur une image pour l'agrandir
+            Cliquez sur une image pour l&apos;agrandir
           </p>
         </div>
       </div>

@@ -35,7 +35,7 @@ export async function GET() {
         goal: parseInt(process.env.NEXT_PUBLIC_DONATION_GOAL || '5000'),
         ...data
       });
-    } catch (fileError) {
+    } catch {
       // If no local file exists, return default values
       return NextResponse.json({
         source: 'default',

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import Link from 'next/link';
 
 export const FloatingDonButton = () => {
@@ -41,7 +41,7 @@ export const FloatingDonButton = () => {
     });
   };
 
-  const handleMouseMove = (e: MouseEvent) => {
+  const handleMouseMove = useCallback((e: MouseEvent) => {
     if (!isDragging) return;
 
     const newX = e.clientX - dragStart.x;
@@ -52,10 +52,10 @@ export const FloatingDonButton = () => {
     const maxY = window.innerHeight - 80; // 80px = hauteur approximative du bouton
 
     setPosition({
-      x: Math.max(20, Math.min(newX, maxX)),
-      y: Math.max(20, Math.min(newY, maxY))
+      x: Math.max(0, Math.min(newX, maxX)),
+      y: Math.max(0, Math.min(newY, maxY))
     });
-  };
+  }, [isDragging, dragStart.x, dragStart.y]);
 
   const handleMouseUp = () => {
     setIsDragging(false);
@@ -71,7 +71,7 @@ export const FloatingDonButton = () => {
     });
   };
 
-  const handleTouchMove = (e: TouchEvent) => {
+  const handleTouchMove = useCallback((e: TouchEvent) => {
     if (!isDragging) return;
     e.preventDefault();
 
@@ -86,7 +86,7 @@ export const FloatingDonButton = () => {
       x: Math.max(20, Math.min(newX, maxX)),
       y: Math.max(20, Math.min(newY, maxY))
     });
-  };
+  }, [isDragging, dragStart.x, dragStart.y]);
 
   const handleTouchEnd = () => {
     setIsDragging(false);
@@ -107,7 +107,7 @@ export const FloatingDonButton = () => {
       document.removeEventListener('touchmove', handleTouchMove);
       document.removeEventListener('touchend', handleTouchEnd);
     };
-  }, [isDragging, dragStart]);
+  }, [isDragging, dragStart, handleMouseMove, handleTouchMove]);
 
   if (!isVisible) return null;
 

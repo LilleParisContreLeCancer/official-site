@@ -89,7 +89,7 @@ export const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate }) =>
       
       {/* "JUSQU'À" text */}
       <div className={'text-lg md:text-xl font-semibold text-primary uppercase mt-8'}>
-        JUSQU'À
+        JUSQU&apos;À
       </div>
     </div>
   );

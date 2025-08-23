@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 interface YouTubeVideo {
   id: string;
@@ -103,10 +104,12 @@ export const YouTubeFeed = ({ maxVideos = 4 }: YouTubeFeedProps) => {
         >
           {/* Thumbnail avec overlay play */}
           <div className="relative aspect-video bg-gray-100">
-            <img
+            <Image
               src={video.thumbnail}
               alt={video.title}
-              className="w-full h-full object-cover"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
             <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
               <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform scale-75 group-hover:scale-100">

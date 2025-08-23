@@ -83,7 +83,7 @@ export const Portraits = ({ className = '' }: PortraitsProps) => {
               <div className={`absolute inset-0 bg-primary/80 transition-opacity duration-300 flex items-center justify-center ${hoveredMember === member.id ? 'opacity-100' : 'opacity-0'
                 }`}>
                 <div className="text-center text-white p-4">
-                  <p className="text-sm italic mb-4">"{member.testimonial}"</p>
+                  <p className="text-sm italic mb-4">&ldquo;{member.testimonial}&rdquo;</p>
                   <div className="flex justify-center space-x-3">
                     {member.email && (
                       <a

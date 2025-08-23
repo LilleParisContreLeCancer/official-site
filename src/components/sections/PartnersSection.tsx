@@ -41,7 +41,7 @@ export const PartnersSection = () => {
           {/* L'Atelier */}
           <div className={'bg-accent p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300'}>
             <div className={'text-center text-black font-bold text-xl'}>
-              L'Atelier
+              L&apos;Atelier
             </div>
           </div>
           
@@ -49,7 +49,7 @@ export const PartnersSection = () => {
           <div className={'bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300'}>
             <div className={'text-center'}>
               <div className={'text-primary font-bold text-xl mb-2'}>EPITA</div>
-              <div className={'text-xs text-gray-600'}>École d'ingénieurs en informatique</div>
+              <div className={'text-xs text-gray-600'}>École d&apos;ingénieurs en informatique</div>
             </div>
           </div>
         </div>

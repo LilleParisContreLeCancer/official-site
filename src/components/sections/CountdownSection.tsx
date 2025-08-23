@@ -22,13 +22,13 @@ export const CountdownSection = () => {
             onClick={() => window.open('mailto:lillepariscontrelecancer@gmail.com?subject=Inscription en tant que cycliste', '_blank')}
             className="primary-button px-8 py-4 font-bold uppercase hover:bg-primary/80 transition-colors text-lg"
           >
-            S'inscrire en tant que cycliste
+            S&apos;inscrire en tant que cycliste
           </button>
           <button 
             onClick={() => window.open('mailto:lillepariscontrelecancer@gmail.com?subject=Inscription en tant que bénévole logistique', '_blank')}
             className="bg-accent text-primary px-8 py-4 rounded-full font-bold uppercase hover:bg-accent/80 transition-colors text-lg"
           >
-            S'inscrire en tant que bénévole logistique
+            S&apos;inscrire en tant que bénévole logistique
           </button>
         </div>
       </div>

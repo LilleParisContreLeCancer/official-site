@@ -93,7 +93,7 @@ export const Explications = () => {
               href={types_dons.logistique.lien_don}
               className="inline-flex items-center justify-center w-full px-6 py-3 bg-secondary text-white font-semibold rounded-lg hover:bg-secondary/90 transition-colors"
             >
-              Donner pour l'association
+              Donner pour l&apos;association
               <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
@@ -147,7 +147,7 @@ export const Explications = () => {
                   Important à savoir
                 </p>
                 <p className="text-blue-700 text-sm">
-                  La déduction fiscale de 66% s'applique dans la limite de 20% de votre revenu imposable. 
+                  La déduction fiscale de 66% s&apos;applique dans la limite de 20% de votre revenu imposable. 
                   Consultez votre situation fiscale personnelle ou votre comptable pour plus de précisions.
                 </p>
               </div>

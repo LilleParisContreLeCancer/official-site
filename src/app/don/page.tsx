@@ -32,7 +32,7 @@ export default function DonationPage() {
                         <div className={'flex-1 flex flex-col items-center text-center relative'}>
                             <h2 className={'text-lg md:text-xl font-bold text-white uppercase mb-8 max-w-sm leading-tight'}>
                                 Dons pour la recherche,<br />
-                                déductible d'impôts à hauteur<br />
+                                déductible d&apos;impôts à hauteur<br />
                                 de <span className="text-accent text-2xl">66%</span>
                             </h2>
 
@@ -66,7 +66,7 @@ export default function DonationPage() {
 
                             <div className={'text-sm md:text-base text-white max-w-md leading-relaxed'}>
                                 <p className={'mb-4'}>
-                                    Grâce à vos dons, le programme de la <span className="font-bold text-accent">Fondation de France</span> "Résistance aux traitements en Cancérologie" soutient chaque année une quinzaine de projets avec deux millions d'euros.
+                                    Grâce à vos dons, le programme de la <span className="font-bold text-accent">Fondation de France</span> &ldquo;Résistance aux traitements en Cancérologie&rdquo; soutient chaque année une quinzaine de projets avec deux millions d&apos;euros.
                                 </p>
                                 <p className={'font-bold text-accent'}>
                                     Merci pour votre générosité !

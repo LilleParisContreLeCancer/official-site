@@ -1,6 +1,6 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
 
-export async function GET(request: NextRequest) {
+export async function GET() {
   try {
     const apiKey = process.env.YOUTUBE_API_KEY;
     const channelId = process.env.YOUTUBE_CHANNEL_ID;
@@ -29,7 +29,18 @@ export async function GET(request: NextRequest) {
     const data = await response.json();
 
     // Transformer les données pour le frontend
-    const videos = data.items?.map((item: any) => ({
+    interface YouTubeItem {
+      id: { videoId: string };
+      snippet: {
+        title: string;
+        description: string;
+        thumbnails: { medium: { url: string } };
+        publishedAt: string;
+        channelTitle: string;
+      };
+    }
+    
+    const videos = data.items?.map((item: YouTubeItem) => ({
       id: item.id.videoId,
       title: item.snippet.title,
       description: item.snippet.description,

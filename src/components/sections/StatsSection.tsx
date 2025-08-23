@@ -9,7 +9,7 @@ export const StatsSection = () => {
         <div className={'w-full max-w-6xl'}>
           <div className={'flex flex-col items-center justify-center gap-8 md:gap-16 text-center p-8'}>
             <div className="flex flex-col sm:flex-row items-center gap-4">
-              <p>VOUS POUVEZ MÊME LAISSER UN PETIT MESSAGE AVEC VOTRE DON, COMME UN LIVRE D'OR !</p>
+              <p>VOUS POUVEZ MÊME LAISSER UN PETIT MESSAGE AVEC VOTRE DON, COMME UN LIVRE D&apos;OR !</p>
               <div className="relative shrink-0">
                 <Image src={'/images/speech-bubble.png'} alt="Bulle de parole" width={150} height={80} />
                 <p className="absolute top-7/16 left-1/4 -translate-x-1/4 -translate-y-1/2 text-primary text-sm font-bold text-center w-full">COURAGE<br />SUR LA<br />ROUTE !</p>
@@ -36,7 +36,7 @@ export const StatsSection = () => {
             <Image src={'/images/micro.png'} alt="Microscope" width={300} height={300} />
           </div>
           <div className="flex flex-col gap-4 w-full md:w-2/3 text-white font-semibold text-md md:text-lg text-center md:text-left">
-            <p>LE VIEILLISSEMENT DE LA POPULATION, L'ÉVOLUTION DES MODES DE VIE ET LES RISQUES ENVIRONNEMENTAUX CONTRIBUENT À L'<Highlight>AUGMENTATION DES CANCERS.</Highlight> MALGRÉ LES PROGRÈS DANS LE DIAGNOSTIC ET LES TRAITEMENTS, LE CANCER RESTE LA PREMIÈRE CAUSE DE MORTALITÉ EN FRANCE AVEC</p>
+            <p>LE VIEILLISSEMENT DE LA POPULATION, L&apos;ÉVOLUTION DES MODES DE VIE ET LES RISQUES ENVIRONNEMENTAUX CONTRIBUENT À L&apos;<Highlight>AUGMENTATION DES CANCERS.</Highlight> MALGRÉ LES PROGRÈS DANS LE DIAGNOSTIC ET LES TRAITEMENTS, LE CANCER RESTE LA PREMIÈRE CAUSE DE MORTALITÉ EN FRANCE AVEC</p>
             <p className="text-accent text-5xl md:text-6xl font-bold text-center my-4">157 000 DÉCÈS EN 2018</p>
             <div className="flex flex-col md:flex-row items-center justify-between gap-8">
               <p>TOUTEFOIS, LA GUÉRISON EST POSSIBLE POUR</p>
@@ -45,7 +45,7 @@ export const StatsSection = () => {
                 <p className="text-accent text-3xl font-bold">57%</p>
                 <p>DES CANCERS CHEZ LA FEMME</p>
                 <p className="text-accent text-3xl font-bold mt-2">44%</p>
-                <p>CHEZ L'HOMME</p>
+                <p>CHEZ L&apos;HOMME</p>
               </div>
             </div>
           </div>
