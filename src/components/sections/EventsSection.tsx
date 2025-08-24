@@ -8,7 +8,7 @@ export const EventsSection = () => {
         <div className={'h-[400px] md:h-[600px] w-full md:w-[512px] relative'}>
           <Image
             className={'object-cover rounded-lg'}
-            src={'/images/marathon.jpeg'}
+            src={'/images/marathon.webp'}
             alt={'Participants lors d\'un marathon'}
             fill={true}
           />

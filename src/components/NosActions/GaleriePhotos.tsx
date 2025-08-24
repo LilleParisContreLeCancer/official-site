@@ -21,7 +21,7 @@ interface Photo {
 const photosData: Photo[] = [
   {
     id: '1',
-    src: '/images/actions/2024-depart-lille.jpg',
+    src: '/images/actions/2024-depart-lille.webp',
     alt: 'Départ de Lille 2024',
     title: 'Départ de Lille - Édition 2024',
     year: 2024,
@@ -31,7 +31,7 @@ const photosData: Photo[] = [
   },
   {
     id: '2',
-    src: '/images/actions/2024-equipe-velo.jpg',
+    src: '/images/actions/2022-etape-parcours.webp',
     alt: 'Équipe cyclistes 2024',
     title: 'Notre équipe de cyclistes',
     year: 2024,
@@ -41,7 +41,7 @@ const photosData: Photo[] = [
   },
   {
     id: '3',
-    src: '/images/actions/2023-arrivee-paris.jpg',
+    src: '/images/actions/2023-arrivee-paris.webp',
     alt: 'Arrivée à Paris 2023',
     title: 'Arrivée triomphale à Paris',
     year: 2023,
@@ -51,7 +51,7 @@ const photosData: Photo[] = [
   },
   {
     id: '4',
-    src: '/images/actions/2022-preparation-velos.jpg',
+    src: '/images/actions/2022-preparation-velos.webp',
     alt: 'Préparation vélos 2022',
     title: 'Préparation des vélos avant le départ',
     year: 2022,
@@ -61,7 +61,7 @@ const photosData: Photo[] = [
   },
   {
     id: '5',
-    src: '/images/actions/equipe-benevoles.jpg',
+    src: '/images/actions/equipe-benevoles.webp',
     alt: 'Equipe bénévoles',
     title: 'Notre équipe de bénévoles',
     year: 2024,
@@ -71,7 +71,7 @@ const photosData: Photo[] = [
   },
   {
     id: '6',
-    src: '/images/actions/equipe-benevoles-2.jpg',
+    src: '/images/actions/equipe-benevoles-2.webp',
     alt: 'Equipe bénévoles',
     title: 'Notre équipe de bénévoles',
     year: 2024,
@@ -182,11 +182,11 @@ export const GaleriePhotos = () => {
                 <LazyImage
                   src={photo.src}
                   alt={photo.alt}
-                  fill
-                  quality="MEDIUM"
+                  quality="HIGH"
                   sizes="CARD"
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  rootMargin="100px 0px"
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  rootMargin="150px 0px"
+                  fill
                 />
 
                 {/* Overlay avec titre */}

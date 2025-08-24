@@ -6,7 +6,7 @@ export const HeroSection = () => {
     <div className={'h-[600px] md:h-[800px] relative flex justify-center w-full'}>
       <Image
         className={'object-bottom object-cover brightness-50'}
-        src={'/images/eiffel.jpg'}
+        src={'/images/eiffel.webp'}
         alt={'Les participants devant la Tour Eiffel'}
         fill={true}
         priority={true}

@@ -58,7 +58,7 @@ export const OptimizedImage = ({
   }
 
   return (
-    <div className={`relative ${isLoading ? 'animate-pulse bg-gray-200' : ''}`}>
+    <div className={`${fill ? 'absolute inset-0' : 'relative'} ${isLoading ? 'animate-pulse bg-gray-200' : ''}`}>
       <Image
         src={optimizedProps.src}
         alt={optimizedProps.alt}

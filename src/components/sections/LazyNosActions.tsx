@@ -78,7 +78,7 @@ export const LazyNosActions = () => {
           </div>
 
           {/* Statistics */}
-          <StatsDynamiques className="mb-16" />
+          <StatsDynamiques />
 
           {/* Photo Gallery */}
           <div className="mb-16">

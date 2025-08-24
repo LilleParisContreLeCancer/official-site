@@ -1,20 +1,9 @@
 import { VideoBackground } from './VideoBackground';
 import { Accroche } from './Accroche';
 import { BoutonDon } from './BoutonDon';
-import dynamic from 'next/dynamic';
 import Image from 'next/image';
 
-// Lazy load heavy components
-const CompteurDons = dynamic(() => import('./CompteurDons').then(mod => ({ default: mod.CompteurDons })), {
-  loading: () => (
-    <div className="bg-gradient-to-br from-primary to-secondary text-white p-6 rounded-2xl shadow-xl animate-pulse">
-      <div className="h-4 bg-white/20 rounded mb-4"></div>
-      <div className="h-8 bg-white/20 rounded mb-4"></div>
-      <div className="h-3 bg-white/20 rounded"></div>
-    </div>
-  ),
-  ssr: false
-});
+ 
 
 export const AccueilSection = () => {
   return (
@@ -37,8 +26,7 @@ export const AccueilSection = () => {
           {/* CTA Buttons */}
           <BoutonDon className="mb-12" />
           
-          {/* Donation Counter */}
-          <CompteurDons className="mx-auto" />
+          
           
           {/* Social Media Quick Access */}
           <div className="flex justify-center space-x-4 mt-8">
@@ -55,6 +43,7 @@ export const AccueilSection = () => {
                 width={24}
                 height={24}
                 className="opacity-80 group-hover:opacity-100 transition-opacity"
+                style={{ aspectRatio: 'auto' }}
                 priority
               />
             </a>
@@ -71,6 +60,7 @@ export const AccueilSection = () => {
                 width={24}
                 height={24}
                 className="text-white"
+                style={{ aspectRatio: 'auto' }}
               />
             </a>
             <a
@@ -86,6 +76,7 @@ export const AccueilSection = () => {
                 width={24}
                 height={24}
                 className="text-white"
+                style={{ aspectRatio: 'auto' }}
               />
             </a>
             <a
@@ -101,6 +92,7 @@ export const AccueilSection = () => {
                 width={24}
                 height={24}
                 className="text-white"
+                style={{ aspectRatio: 'auto' }}
               />
             </a>
             <a
@@ -116,6 +108,7 @@ export const AccueilSection = () => {
                 width={24}
                 height={24}
                 className="text-white"
+                style={{ aspectRatio: 'auto' }}
               />
             </a>
           </div>
@@ -134,6 +127,7 @@ export const AccueilSection = () => {
                 width={20}
                 height={20}
                 className="text-white"
+                style={{ aspectRatio: 'auto' }}
               />
               <span>Voir la vidéo</span>
             </a>
@@ -171,4 +165,4 @@ export const AccueilSection = () => {
 };
 
 // Export individual components for reuse
-export { VideoBackground, Accroche, BoutonDon, CompteurDons };
+export { VideoBackground, Accroche, BoutonDon };

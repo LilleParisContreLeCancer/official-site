@@ -11,7 +11,7 @@ export const StatsSection = () => {
             <div className="flex flex-col sm:flex-row items-center gap-4">
               <p>VOUS POUVEZ MÊME LAISSER UN PETIT MESSAGE AVEC VOTRE DON, COMME UN LIVRE D&apos;OR !</p>
               <div className="relative shrink-0">
-                <Image src={'/images/speech-bubble.png'} alt="Bulle de parole" width={150} height={80} />
+                <Image src={'/images/speech-bubble.webp'} alt="Bulle de parole" width={150} height={80} />
                 <p className="absolute top-7/16 left-1/4 -translate-x-1/4 -translate-y-1/2 text-primary text-sm font-bold text-center w-full">COURAGE<br />SUR LA<br />ROUTE !</p>
               </div>
             </div>
@@ -33,7 +33,7 @@ export const StatsSection = () => {
       <div className={'bg-primary flex flex-col items-center justify-center w-full gap-16 py-32 px-4'}>
         <div className="flex flex-col md:flex-row items-center justify-between w-full max-w-6xl gap-8">
           <div className="relative w-full md:w-1/3 flex justify-center">
-            <Image src={'/images/micro.png'} alt="Microscope" width={300} height={300} />
+            <Image src={'/images/micro.webp'} alt="Microscope" width={300} height={300} />
           </div>
           <div className="flex flex-col gap-4 w-full md:w-2/3 text-white font-semibold text-md md:text-lg text-center md:text-left">
             <p>LE VIEILLISSEMENT DE LA POPULATION, L&apos;ÉVOLUTION DES MODES DE VIE ET LES RISQUES ENVIRONNEMENTAUX CONTRIBUENT À L&apos;<Highlight>AUGMENTATION DES CANCERS.</Highlight> MALGRÉ LES PROGRÈS DANS LE DIAGNOSTIC ET LES TRAITEMENTS, LE CANCER RESTE LA PREMIÈRE CAUSE DE MORTALITÉ EN FRANCE AVEC</p>
@@ -41,7 +41,7 @@ export const StatsSection = () => {
             <div className="flex flex-col md:flex-row items-center justify-between gap-8">
               <p>TOUTEFOIS, LA GUÉRISON EST POSSIBLE POUR</p>
               <div className="flex flex-col items-center">
-                <Image src={'/images/person.png'} alt="Silhouette homme et femme" width={150} height={150} />
+                <Image src={'/images/person.webp'} alt="Silhouette homme et femme" width={150} height={150} />
                 <p className="text-accent text-3xl font-bold">57%</p>
                 <p>DES CANCERS CHEZ LA FEMME</p>
                 <p className="text-accent text-3xl font-bold mt-2">44%</p>

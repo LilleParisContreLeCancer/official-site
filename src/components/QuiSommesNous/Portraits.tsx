@@ -20,7 +20,7 @@ const teamMembers: TeamMember[] = [
     name: 'Emilia MESELLATY',
     role: 'Présidente',
     testimonial: 'Ensemble, nous pédalons pour la recherche contre le cancer.',
-    image: '/images/portraits/presidente.jpg',
+    image: '/images/portraits/presidente.webp',
     email: 'emilia.mesellaty@gmail.com',
     linkedin: 'https://linkedin.com/in/emilia-mesellaty'
   },
@@ -29,7 +29,7 @@ const teamMembers: TeamMember[] = [
     name: 'Nathalie BOUQUET',
     role: 'Trésorière',
     testimonial: 'Chaque euro compte pour soutenir la recherche médicale.',
-    image: '/images/portraits/tresoriere.jpg',
+    image: '/images/portraits/tresoriere.webp',
     email: 'lillepariscontrelecancer@mail.com'
   },
   {
@@ -37,7 +37,7 @@ const teamMembers: TeamMember[] = [
     name: 'Amélie BERTIN',
     role: 'Secrétaire',
     testimonial: 'L\'organisation au service d\'une noble cause.',
-    image: '/images/portraits/secretaire.jpg',
+    image: '/images/portraits/secretaire.webp',
     email: 'lillepariscontrelecancer@mail.com'
   }
 ];
@@ -74,10 +74,11 @@ export const Portraits = ({ className = '' }: PortraitsProps) => {
               <LazyImage
                 src={member.image}
                 alt={`Portrait de ${member.name}, ${member.role} de LPCC`}
-                fill
+                width={400}
+                height={400}
                 quality="HIGH"
                 sizes="PORTRAIT"
-                className="object-cover transition-transform duration-300 group-hover:scale-110"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                 rootMargin="150px 0px"
               />
 

@@ -49,8 +49,8 @@ export const LazyImage = ({
   return (
     <div 
       ref={elementRef} 
-      className={`relative ${className}`}
-      style={!fill ? { width, height } : undefined}
+      className={`${fill ? 'absolute inset-0' : 'relative'} ${className}`}
+      style={!fill ? { width, height } : { position: 'absolute', inset: 0 }}
     >
       {loadImage ? (
         <OptimizedImage
@@ -61,7 +61,7 @@ export const LazyImage = ({
           quality={quality}
           sizes={sizes}
           priority={priority}
-          className={className}
+          className=""
           fill={fill}
           placeholder={placeholder}
           blurDataURL={blurDataURL}
@@ -70,7 +70,7 @@ export const LazyImage = ({
         // Placeholder skeleton while not in view
         <div 
           className={`bg-gray-200 animate-pulse ${fill ? 'absolute inset-0' : ''}`}
-          style={!fill ? { width, height } : undefined}
+          style={!fill ? { width, height } : { position: 'absolute', inset: 0 }}
         >
           <div className="flex items-center justify-center h-full text-gray-400 text-sm">
             {/* Optional loading icon */}

@@ -5,7 +5,7 @@ export const AboutSection = () => {
   return (
     <div className={'bg-secondary flex flex-col items-center justify-center w-full gap-16 md:gap-32 py-16 md:py-32 px-4'}>
       <div className={'flex flex-col md:flex-row items-center justify-between gap-8 md:gap-4 text-center p-8 w-full max-w-6xl'}>
-        <Image src={'/images/cyclist.png'} alt={'Silouhette d\'un cycliste'} width={256} height={256} className="order-2 md:order-1" />
+        <Image src={'/images/cyclist.webp'} alt={'Silouhette d\'un cycliste'} width={256} height={256} className="order-2 md:order-1" />
         <div className="flex flex-col items-center md:items-end gap-4 md:gap-8 order-1 md:order-2">
           <h2 className={'font-bold text-4xl md:text-5xl uppercase text-primary text-center md:text-end'}>
             Qui sommes nous ?
@@ -32,7 +32,7 @@ export const AboutSection = () => {
             <Highlight>{'la lutte contre le cancer.'}</Highlight>
           </p>
         </div>
-        <Image className="rounded-full w-full max-w-xs md:max-w-md lg:max-w-lg" src={'/images/rainbow.jpeg'} alt={'Participant qui décharge un vélo d\'une voiture'} width={600} height={600} />
+        <Image className="rounded-full w-full max-w-xs md:max-w-md lg:max-w-lg" src={'/images/rainbow.webp'} alt={'Participant qui décharge un vélo d\'une voiture'} width={600} height={600} />
       </div>
     </div>
   );

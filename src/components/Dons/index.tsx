@@ -54,7 +54,7 @@ export const Dons = () => {
 
               <div className="mb-8">
                 <Image
-                  src="/images/fondation-france-logo.png"
+                  src="/images/fondation-france-logo.webp"
                   alt="Logo Fondation de France"
                   width={200}
                   height={80}

@@ -13,26 +13,26 @@ interface CompteurDonsProps {
 }
 
 export const CompteurDons = ({ className = '' }: CompteurDonsProps) => {
-  const [donData, setDonData] = useState<DonData>({ current: 1250, goal: 5000, source: 'loading' });
-  const [animatedCurrent, setAnimatedCurrent] = useState(1250);
+  const [donData, setDonData] = useState<DonData>({ current: 0, goal: 5000, source: 'loading' });
+  const [animatedCurrent, setAnimatedCurrent] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     // Fetch donation data
     const fetchDonData = async () => {
       try {
-        const response = await fetch('/api/dons');
+        const response = await fetch('/api/dons', { cache: 'no-store' });
         if (response.ok) {
           const data = await response.json();
           setDonData(data);
         } else {
           // Fallback data if API fails
-          setDonData({ current: 1250, goal: 5000, source: 'fallback' });
+          setDonData({ current: 0, goal: 5000, source: 'fallback' });
         }
       } catch (error) {
         console.error('Erreur lors du chargement des données de dons:', error);
         // Fallback data
-        setDonData({ current: 1250, goal: 5000, source: 'fallback' });
+        setDonData({ current: 0, goal: 5000, source: 'fallback' });
       } finally {
         setIsLoading(false);
       }
@@ -53,7 +53,7 @@ export const CompteurDons = ({ className = '' }: CompteurDonsProps) => {
     const timer = setInterval(() => {
       currentStep++;
       setAnimatedCurrent(Math.min(Math.round(increment * currentStep), donData.current));
-      
+
       if (currentStep >= steps) {
         clearInterval(timer);
       }
@@ -70,7 +70,7 @@ export const CompteurDons = ({ className = '' }: CompteurDonsProps) => {
         <h3 className="text-xl font-bold mb-4 text-center">
           🎯 Objectif de collecte
         </h3>
-        
+
         <div className="text-center mb-6">
           <div className="text-4xl font-bold mb-2 h-12 flex items-center justify-center">
             <div className="animate-pulse bg-white/20 rounded h-8 w-32"></div>
@@ -97,7 +97,7 @@ export const CompteurDons = ({ className = '' }: CompteurDonsProps) => {
       <h3 className="text-xl font-bold mb-4 text-center">
         🎯 Objectif de collecte
       </h3>
-      
+
       <div className="text-center mb-6">
         <div className="text-4xl font-bold mb-2 h-12 flex items-center justify-center">
           {animatedCurrent.toLocaleString('fr-FR')} €
@@ -109,7 +109,7 @@ export const CompteurDons = ({ className = '' }: CompteurDonsProps) => {
 
       {/* Progress bar */}
       <div className="w-full bg-white/20 rounded-full h-3 mb-4 overflow-hidden">
-        <div 
+        <div
           className="bg-gradient-to-r from-accent to-tertiary h-full rounded-full transition-all duration-1000 ease-out"
           style={{ width: `${percentage}%` }}
         ></div>

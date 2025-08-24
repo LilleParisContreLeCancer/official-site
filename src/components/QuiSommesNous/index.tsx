@@ -1,6 +1,7 @@
 import { Portraits } from './Portraits';
 import { PartenairesCarousel } from './PartenairesCarousel';
 import { CarteParcours } from './CarteParcours';
+import { CompteARebours } from './CompteARebours';
 
 export const QuiSommesNousSection = () => {
   return (
@@ -34,6 +35,11 @@ export const QuiSommesNousSection = () => {
         {/* Route map */}
         <div>
           <CarteParcours />
+        </div>
+
+        {/* Countdown below the parcours */}
+        <div className="mt-10">
+          <CompteARebours />
         </div>
 
       </div>

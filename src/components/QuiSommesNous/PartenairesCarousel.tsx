@@ -22,42 +22,42 @@ const partners: Partner[] = [
   {
     id: 'fondation-france',
     name: 'Fondation de France',
-    logo: '/images/partenaires/fondation-france.png',
+    logo: '/images/partenaires/fondation-france.webp',
     url: 'https://www.fondationdefrance.org',
     description: 'Partenaire principal pour la recherche contre le cancer'
   },
   {
     id: 'epita',
     name: 'EPITA',
-    logo: '/images/partenaires/epita.png',
+    logo: '/images/partenaires/epita.webp',
     url: 'https://www.epita.fr',
     description: 'École d\'ingénieurs en informatique'
   },
   {
     id: 'opal',
     name: 'OPAL',
-    logo: '/images/partenaires/opal.png',
+    logo: '/images/partenaires/opal.webp',
     url: 'https://www.opal-ch.com/',
     description: 'Partenaire logistique et soutien'
   },
   {
     id: 'pour-mon-velo',
     name: 'Pour Mon Vélo',
-    logo: '/images/partenaires/pour-mon-velo.png',
+    logo: '/images/partenaires/pour-mon-velo.webp',
     url: 'https://www.pourmonvelo.com/',
     description: 'Équipement et maintenance vélo'
   },
   {
     id: 'latelier',
     name: 'L\'Atelier',
-    logo: '/images/partenaires/latelier.png',
+    logo: '/images/partenaires/latelier.webp',
     url: 'https://www.instagram.com/latelier_maker/',
     description: 'Atelier de réparation et maintenance'
   },
   {
     id: 'procomm-mmc',
     name: 'PROCOMM-MMC',
-    logo: '/images/partenaires/procomm-mmc.jpg',
+    logo: '/images/partenaires/procomm-mmc.webp',
     url: 'https://www.procomm-mmc.com/',
     description: 'Communication et marketing'
   }
@@ -119,6 +119,7 @@ export const PartenairesCarousel = ({ className = '' }: PartenairesCarouselProps
                     alt={`Logo ${partner.name}`}
                     fill
                     className="object-contain p-4 transition-transform duration-300 group-hover:scale-110"
+                    style={{ aspectRatio: 'auto' }}
                     sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                   />
                 </div>
@@ -156,8 +157,9 @@ export const PartenairesCarousel = ({ className = '' }: PartenairesCarouselProps
 
       {/* CTA section */}
       <div className="text-center mt-12">
-        <p className="text-lg text-white/90 mb-6">
-          Vous souhaitez devenir partenaire de notre événement ?
+        <p className="text-xl text-white mb-6">
+          <span className="font-bold">Nous avons besoin du plus grand nombre de partenaires et de soutiens.</span>
+          {' '}Plus nous avons de moyens, plus nous pouvons accueillir de participants, et plus notre impact est fort pour la recherche et notre message.
         </p>
         <a
           href="/mecenat-2025.pdf"

@@ -5,13 +5,13 @@ export default function PolitiqueConfidentialite() {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-      
+
       <main className="flex-grow bg-white py-16">
         <div className="max-w-4xl mx-auto px-4">
           <h1 className="text-4xl font-bold text-primary mb-8">
             Politique de Confidentialité
           </h1>
-          
+
           <div className="prose prose-lg max-w-none">
             <p className="text-gray-600 mb-8">
               <strong>Dernière mise à jour :</strong> {new Date().toLocaleDateString('fr-FR')}
@@ -20,7 +20,7 @@ export default function PolitiqueConfidentialite() {
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-primary mb-4">1. Qui sommes-nous ?</h2>
               <p className="text-gray-700 leading-relaxed">
-                Lille Paris Contre le Cancer (LPCC) est une association à but non lucratif dédiée à la lutte contre le cancer. 
+                Lille Paris Contre le Cancer (LPCC) est une association à but non lucratif dédiée à la lutte contre le cancer.
                 Nous collectons et traitons vos données personnelles dans le respect du Règlement Général sur la Protection des Données (RGPD).
               </p>
             </section>
@@ -51,7 +51,7 @@ export default function PolitiqueConfidentialite() {
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-primary mb-4">4. Base légale du traitement</h2>
               <p className="text-gray-700 leading-relaxed">
-                Le traitement de vos données repose sur votre <strong>consentement explicite</strong> (article 6.1.a du RGPD). 
+                Le traitement de vos données repose sur votre <strong>consentement explicite</strong> (article 6.1.a du RGPD).
                 Vous pouvez retirer ce consentement à tout moment sans affecter la licéité du traitement fondé sur le consentement effectué avant ce retrait.
               </p>
             </section>
@@ -60,8 +60,8 @@ export default function PolitiqueConfidentialite() {
               <h2 className="text-2xl font-bold text-primary mb-4">5. Avec qui partageons-nous vos données ?</h2>
               <div className="bg-blue-50 p-6 rounded-lg">
                 <p className="text-gray-700 leading-relaxed">
-                  Nous utilisons <strong>Mailchimp</strong> (The Rocket Science Group LLC) pour gérer notre newsletter. 
-                  Mailchimp est conforme RGPD et dispose de certifications de sécurité appropriées. 
+                  Nous utilisons <strong>Formspree</strong> pour gérer notre newsletter.
+                  Formspree est conforme RGPD et dispose de certifications de sécurité appropriées.
                   Vos données ne sont jamais vendues à des tiers.
                 </p>
               </div>
@@ -106,8 +106,6 @@ export default function PolitiqueConfidentialite() {
                 </p>
                 <ul className="text-primary space-y-2">
                   <li><strong>📧 Email :</strong> contact@lille-paris-contre-cancer.org</li>
-                  <li><strong>📮 Courrier :</strong> Lille Paris Contre le Cancer - Protection des données</li>
-                  <li><strong>🔗 Désinscription newsletter :</strong> Cliquez sur le lien en bas de chaque email</li>
                 </ul>
               </div>
             </section>
@@ -128,7 +126,7 @@ export default function PolitiqueConfidentialite() {
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-primary mb-4">10. Modifications de cette politique</h2>
               <p className="text-gray-700 leading-relaxed">
-                Nous pouvons modifier cette politique de confidentialité. En cas de changement significatif, 
+                Nous pouvons modifier cette politique de confidentialité. En cas de changement significatif,
                 nous vous en informerons par email ou via une notification sur notre site web.
               </p>
             </section>
@@ -136,8 +134,8 @@ export default function PolitiqueConfidentialite() {
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-primary mb-4">11. Réclamations</h2>
               <p className="text-gray-700 leading-relaxed">
-                Si vous estimez que vos droits ne sont pas respectés, vous pouvez introduire une réclamation 
-                auprès de la Commission Nationale de l&apos;Informatique et des Libertés (CNIL) : 
+                Si vous estimez que vos droits ne sont pas respectés, vous pouvez introduire une réclamation
+                auprès de la Commission Nationale de l&apos;Informatique et des Libertés (CNIL) :
                 <a href="https://www.cnil.fr" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">
                   www.cnil.fr
                 </a>
@@ -147,14 +145,14 @@ export default function PolitiqueConfidentialite() {
             <div className="bg-primary text-white p-6 rounded-lg text-center">
               <h3 className="text-xl font-bold mb-2">🛡️ Notre engagement</h3>
               <p>
-                Lille Paris Contre le Cancer s&apos;engage à respecter votre vie privée et à protéger vos données personnelles 
+                Lille Paris Contre le Cancer s&apos;engage à respecter votre vie privée et à protéger vos données personnelles
                 conformément aux réglementations en vigueur.
               </p>
             </div>
           </div>
         </div>
       </main>
-      
+
       <Footer />
     </div>
   );

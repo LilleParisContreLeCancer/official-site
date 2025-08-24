@@ -5,6 +5,7 @@ Ce dossier contient les composants optimisés pour le lazy loading qui améliore
 ## 🚀 Composants disponibles
 
 ### `LazyImage`
+
 Image optimisée qui se charge seulement quand elle devient visible.
 
 ```tsx
@@ -22,6 +23,7 @@ import { LazyImage } from '@/components/ui/LazyImage';
 ```
 
 ### `LazySection`
+
 Section complète qui se charge au scroll.
 
 ```tsx
@@ -33,6 +35,7 @@ import { LazySection } from '@/components/ui/LazySection';
 ```
 
 ### `LazyWrapper`
+
 Wrapper avancé avec Suspense pour les composants dynamiques.
 
 ```tsx

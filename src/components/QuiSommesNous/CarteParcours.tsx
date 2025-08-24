@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { CompteARebours } from './CompteARebours';
 
 interface CarteParcoursProps {
   className?: string;
@@ -21,29 +22,11 @@ export const CarteParcours = ({ className = '' }: CarteParcoursProps) => {
         <p className="text-xl text-white/90 max-w-4xl mx-auto leading-relaxed">
           Découvrez l&apos;itinéraire de notre périple de Lille à Paris,
           un parcours de plus de 300 kilomètres au service de la recherche contre le cancer.
+          Les <span className="font-semibold">27 et 28 décembre</span>, nous roulons pour profiter de l&apos;élan des fêtes :
+          une période de générosité, de chaleur et de partage. Plus nous sommes nombreux, plus notre message
+          porte loin et plus nous renforçons l&apos;impact de la recherche. Chaque coup de pédale est un geste
+          d&apos;espoir pour celles et ceux qui en ont besoin.
         </p>
-
-        {/* Live tracking toggle - only visible during event */}
-        {process.env.NODE_ENV === 'development' && (
-          <div className="flex items-center justify-center gap-4 mb-6">
-            <label className="flex items-center cursor-pointer">
-              <input
-                type="checkbox"
-                checked={isLiveMode}
-                onChange={(e) => setIsLiveMode(e.target.checked)}
-                className="sr-only"
-              />
-              <div className={`relative w-12 h-6 rounded-full transition-colors ${isLiveMode ? 'bg-accent' : 'bg-gray-300'
-                }`}>
-                <div className={`absolute top-1 left-1 w-4 h-4 bg-white rounded-full transition-transform ${isLiveMode ? 'translate-x-6' : 'translate-x-0'
-                  }`}></div>
-              </div>
-              <span className="ml-3 text-sm font-medium text-gray-700">
-                Mode suivi en direct
-              </span>
-            </label>
-          </div>
-        )}
       </div>
 
       <div className="max-w-6xl mx-auto">
@@ -76,6 +59,7 @@ export const CarteParcours = ({ className = '' }: CarteParcoursProps) => {
               referrerPolicy="no-referrer-when-downgrade"
               title="Parcours Lille-Paris contre le Cancer"
               className="w-full h-full"
+              sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
             ></iframe>
 
             {/* Live mode overlay */}
@@ -88,13 +72,17 @@ export const CarteParcours = ({ className = '' }: CarteParcoursProps) => {
 
           {/* Map footer with key info */}
           <div className="bg-gray-50 p-4">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-center items-stretch">
+              {/* Inline countdown */}
+              <div className="flex items-center justify-center">
+                <CompteARebours variant="inline" />
+              </div>
               <div>
                 <div className="text-2xl font-bold text-primary">2 jours</div>
                 <div className="text-sm text-gray-600">Durée du parcours</div>
               </div>
               <div>
-                <div className="text-2xl font-bold text-accent">8 étapes</div>
+                <div className="text-2xl font-bold text-accent">16 étapes</div>
                 <div className="text-sm text-gray-600">Points de passage</div>
               </div>
               <div>

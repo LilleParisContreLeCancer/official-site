@@ -8,6 +8,8 @@ interface VideoBackgroundProps {
 }
 
 export const VideoBackground = ({ className = '' }: VideoBackgroundProps) => {
+  // Mount gate to avoid hydration mismatches between SSR and client
+  const [mounted, setMounted] = useState(false);
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [showVideo, setShowVideo] = useState(false);
@@ -16,6 +18,7 @@ export const VideoBackground = ({ className = '' }: VideoBackgroundProps) => {
   const youtubeVideoId = 'pZ-cJe39f4w';
 
   useEffect(() => {
+    setMounted(true);
     // Check for reduced motion preference
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
     setPrefersReducedMotion(mediaQuery.matches);
@@ -39,7 +42,21 @@ export const VideoBackground = ({ className = '' }: VideoBackgroundProps) => {
     };
   }, []);
 
-  // Show only image if reduced motion is preferred or on mobile
+  // During SSR and before mounting, render a deterministic fallback image
+  if (!mounted) {
+    return (
+      <Image
+        src="/images/accueil-fallback.webp"
+        alt="Cyclistes lors de l'événement Lille-Paris contre le cancer"
+        fill
+        priority
+        className={`object-cover ${className}`}
+        style={{ aspectRatio: 'auto' }}
+      />
+    );
+  }
+
+  // After mount: show only image if reduced motion is preferred or on mobile
   if (prefersReducedMotion || isMobile) {
     return (
       <Image
@@ -48,6 +65,7 @@ export const VideoBackground = ({ className = '' }: VideoBackgroundProps) => {
         fill
         priority
         className={`object-cover ${className}`}
+        style={{ aspectRatio: 'auto' }}
       />
     );
   }
@@ -65,6 +83,7 @@ export const VideoBackground = ({ className = '' }: VideoBackgroundProps) => {
         fill
         priority
         className={`object-cover ${className} cursor-pointer`}
+        style={{ aspectRatio: 'auto' }}
         onClick={handleVideoClick}
       />
       
