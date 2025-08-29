@@ -1,0 +1,18 @@
+PLACEHOLDER FILE - À REMPLACER
+
+Ce fichier doit être remplacé par une image WebP optimisée (accueil-fallback.webp) qui servira de :
+1. Image de fallback si la vidéo ne peut pas être chargée
+2. Poster de la vidéo pendant le chargement
+3. Image affichée sur mobile et pour les utilisateurs avec prefers-reduced-motion
+
+Spécifications recommandées :
+- Format : WebP
+- Dimensions : 1920x1080 (16:9) minimum
+- Taille : < 500KB
+- Contenu : Image représentative de l'événement LPCC (cyclistes, parcours, etc.)
+
+Pour créer cette image :
+1. Utiliser une photo de l'événement précédent
+2. Optimiser avec des outils comme Squoosh.app ou TinyPNG
+3. Renommer en accueil-fallback.webp
+4. Supprimer ce fichier .info

@@ -1,0 +1,72 @@
+{
+  "types_dons": {
+    "recherche": {
+      "titre": "Don pour la recherche",
+      "description": "Vos dons sont directement versés à la Fondation de France pour financer des projets de recherche contre le cancer.",
+      "avantages": [
+        "Déduction fiscale de 66% du montant",
+        "Reçu fiscal immédiat",
+        "Impact direct sur la recherche",
+        "Transparence totale via Fondation de France"
+      ],
+      "lien_don": "https://lpcc.pagefondationdefrance.org/",
+      "couleur": "primary"
+    },
+    "logistique": {
+      "titre": "Don pour l'association",
+      "description": "Vos dons soutiennent les frais de logistique, d'organisation et de communication de l'association LPCC.",
+      "avantages": [
+        "Facture automatique envoyée par email",
+        "Paiement sécurisé",
+        "Soutien à l'organisation de l'événement",
+        "Développement de nos actions"
+      ],
+      "lien_don": "#paiement-lpcc",
+      "couleur": "secondary"
+    }
+  },
+  "simulateur": {
+    "taux_deduction": 0.66,
+    "plafond_deduction": 20,
+    "exemples": [
+      {
+        "montant": 50,
+        "deduction": 33,
+        "cout_net": 17
+      },
+      {
+        "montant": 100,
+        "deduction": 66,
+        "cout_net": 34
+      },
+      {
+        "montant": 200,
+        "deduction": 132,
+        "cout_net": 68
+      }
+    ]
+  },
+  "securite": {
+    "certifications": [
+      {
+        "nom": "SSL",
+        "description": "Connexion sécurisée",
+        "logo": "/images/security/ssl-logo.svg"
+      },
+      {
+        "nom": "PCI DSS",
+        "description": "Norme de sécurité des données",
+        "logo": "/images/security/pci-dss-logo.svg"
+      },
+      {
+        "nom": "Cartes bancaires",
+        "description": "Paiement sécurisé",
+        "logo": "/images/security/cartes-bancaires-logo.svg"
+      }
+    ]
+  },
+  "recus_fiscaux": {
+    "fondation": "Reçu fiscal automatique envoyé par la Fondation de France sous 48h.",
+    "lpcc": "Facture automatique envoyée à votre adresse email lors du don. LPCC n'est pas encore éligible aux reçus fiscaux."
+  }
+}

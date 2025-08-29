@@ -1,0 +1,38 @@
+{
+  "membres": [
+    {
+      "id": "president",
+      "name": "Jean Dupont",
+      "role": "Président",
+      "testimonial": "Ensemble, nous pédalons pour la recherche contre le cancer.",
+      "image": "/images/portraits/president.jpg",
+      "email": "president@lille-paris-contre-le-cancer.fr",
+      "linkedin": "https://linkedin.com/in/jean-dupont"
+    },
+    {
+      "id": "tresorier",
+      "name": "Marie Martin",
+      "role": "Trésorière",
+      "testimonial": "Chaque euro compte pour soutenir la recherche médicale.",
+      "image": "/images/portraits/tresorier.jpg",
+      "email": "tresorier@lille-paris-contre-le-cancer.fr"
+    },
+    {
+      "id": "secretaire",
+      "name": "Pierre Moreau",
+      "role": "Secrétaire",
+      "testimonial": "L'organisation au service d'une noble cause.",
+      "image": "/images/portraits/secretaire.jpg",
+      "linkedin": "https://linkedin.com/in/pierre-moreau"
+    },
+    {
+      "id": "logistique",
+      "name": "Sophie Bernard",
+      "role": "Responsable Logistique",
+      "testimonial": "Préparer chaque détail pour un événement réussi.",
+      "image": "/images/portraits/logistique.jpg",
+      "email": "logistique@lille-paris-contre-le-cancer.fr"
+    }
+  ],
+  "lastUpdated": "2025-01-10T14:30:00.000Z"
+}

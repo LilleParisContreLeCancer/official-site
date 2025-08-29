@@ -1,0 +1,24 @@
+PLACEHOLDER FILE - À REMPLACER
+
+Ce fichier doit être remplacé par une vidéo WebM optimisée (accueil.webm) pour le background de la section Accueil.
+
+Spécifications recommandées :
+- Format : WebM (VP9)
+- Dimensions : 1920x1080 (16:9) minimum
+- Durée : 10-30 secondes (loop)
+- Taille : < 3MB (généralement plus petit que MP4)
+- Contenu : Identique à accueil.mp4
+
+Commande ffmpeg pour créer le WebM :
+ffmpeg -i accueil.mp4 -c:v libvpx-vp9 -crf 30 -b:v 0 -c:a libopus -b:a 128k accueil.webm
+
+Avantages du WebM :
+- Meilleure compression que MP4
+- Support natif dans Chrome/Firefox
+- Fallback MP4 pour Safari/Edge
+
+Pour créer cette vidéo :
+1. Partir du fichier accueil.mp4 optimisé
+2. Convertir avec ffmpeg
+3. Tester la compatibilité
+4. Supprimer ce fichier .info

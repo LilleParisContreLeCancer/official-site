@@ -1,0 +1,22 @@
+{
+  "editions": {
+    "value": 4,
+    "label": "Éditions",
+    "description": "Depuis 2021"
+  },
+  "kilometres": {
+    "value": 1087,
+    "label": "Kilomètres parcourus",
+    "description": "Au total depuis le début"
+  },
+  "euros_recoltes": {
+    "value": 10530,
+    "label": "Euros récoltés",
+    "description": "Pour la recherche contre le cancer"
+  },
+  "participants": {
+    "value": 30,
+    "label": "Participants",
+    "description": "Cyclistes et bénévoles cumulés"
+  }
+}
