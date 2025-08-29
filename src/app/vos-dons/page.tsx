@@ -1,20 +1,20 @@
 'use client';
 
-import type { Metadata } from 'next';
+// import type { Metadata } from 'next';
 import Link from 'next/link';
 import { useState } from 'react';
 
-const metadata: Metadata = {
-    title: 'Vos Dons - Lille-Paris contre le cancer',
-    description: 'Soutenez la recherche contre le cancer ou notre association. Chaque don compte et bénéficie d\'avantages fiscaux de 66%.',
-};
+// const metadata: Metadata = {
+//     title: 'Vos Dons - Lille-Paris contre le cancer',
+//     description: 'Soutenez la recherche contre le cancer ou notre association. Chaque don compte et bénéficie d\'avantages fiscaux de 66%.',
+// };
 
 export default function VosDonsPage() {
     const [donAmount, setDonAmount] = useState(100);
-    const [email, setEmail] = useState('');
-    const [firstName, setFirstName] = useState('');
-    const [lastName, setLastName] = useState('');
-    const [acceptNewsletter, setAcceptNewsletter] = useState(false);
+    // const [email, setEmail] = useState('');
+    // const [firstName, setFirstName] = useState('');
+    // const [lastName, setLastName] = useState('');
+    // const [acceptNewsletter, setAcceptNewsletter] = useState(false);
 
     const deductionFiscale = Math.round(donAmount * 0.66);
     const coutReel = donAmount - deductionFiscale;

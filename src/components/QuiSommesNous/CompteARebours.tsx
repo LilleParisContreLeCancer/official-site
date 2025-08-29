@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from 'react';
 
 function getTargetDate(): Date {
   const now = new Date();
@@ -15,18 +15,17 @@ function getTargetDate(): Date {
 
 type CompteProps = { className?: string; variant?: 'card' | 'inline' };
 
-export const CompteARebours = ({ className = "", variant = 'card' }: CompteProps) => {
+export const CompteARebours = ({ className = '', variant = 'card' }: CompteProps) => {
   const target = useMemo(() => getTargetDate(), []);
   const [now, setNow] = useState<Date | null>(null);
 
   // Update every 30s for efficiency; switch to 1s when < 1h for precision
   useEffect(() => {
     setNow(new Date());
-    let interval: number | undefined;
 
     const tick = () => setNow(new Date());
     // Start with 30s tick
-    interval = window.setInterval(tick, 30000);
+    const interval = window.setInterval(tick, 30000);
 
     return () => {
       if (interval) window.clearInterval(interval);
@@ -57,16 +56,16 @@ export const CompteARebours = ({ className = "", variant = 'card' }: CompteProps
   // Switch display from days to hours when < 24h remaining
   const showHoursOnly = diffHoursTotal < 24;
 
-  let labelTop = "Compte à rebours";
-  let value = "";
-  let unit = "";
+  const labelTop = 'Compte à rebours';
+  let value = '';
+  let unit = '';
 
   if (showHoursOnly) {
     value = String(diffHoursTotal);
-    unit = diffHoursTotal <= 1 ? "heure restante" : "heures restantes";
+    unit = diffHoursTotal <= 1 ? 'heure restante' : 'heures restantes';
   } else {
     value = String(diffDays);
-    unit = diffDays <= 1 ? "jour restant" : "jours restants";
+    unit = diffDays <= 1 ? 'jour restant' : 'jours restants';
   }
 
   if (variant === 'inline') {
@@ -89,7 +88,7 @@ export const CompteARebours = ({ className = "", variant = 'card' }: CompteProps
         {!showHoursOnly && (
           <p className="text-sm opacity-75 mt-2">{hoursRemainder} h supplémentaires</p>
         )}
-        <p className="text-xs opacity-60 mt-2">Échéance : 27 décembre, 07:00</p>
+        <p className="text-xs opacity-60 mt-2">Échéance : 27 décembre, 07:00</p>
       </div>
     </div>
   );

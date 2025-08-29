@@ -11,8 +11,9 @@
   "dependencies": {
     "@formspree/react": "^3.0.0",
     "clsx": "^2.1.1",
+    "critters": "^0.0.23",
     "motion": "^12.23.6",
-    "next": "^15.4.2",
+    "next": "^15.5.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "swiper": "^11.2.10",

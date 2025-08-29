@@ -1,6 +1,6 @@
 'use client';
 
-import { ReactNode, lazy, Suspense } from 'react';
+import { ReactNode, Suspense } from 'react';
 import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
 
 interface LazyWrapperProps {

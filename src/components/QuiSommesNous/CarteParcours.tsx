@@ -8,7 +8,7 @@ interface CarteParcoursProps {
 }
 
 export const CarteParcours = ({ className = '' }: CarteParcoursProps) => {
-  const [isLiveMode, setIsLiveMode] = useState(false);
+  const [isLiveMode] = useState(false);
 
   // URL Google My Maps - version embed pour l'iframe
   const mapUrl = "https://www.google.com/maps/d/embed?mid=1MbuWa5VOb9VGjjN5czfxHSlM0nCKgEQ&ehbc=2E312F";

@@ -1,10 +1,9 @@
 'use client';
 
-import { useState, useCallback } from 'react';
+import { useCallback, useState } from 'react';
 import Lightbox from 'yet-another-react-lightbox';
 import 'yet-another-react-lightbox/styles.css';
 import { LazyImage } from '@/components/ui/LazyImage';
-import { LazySection } from '@/components/ui/LazySection';
 
 interface Photo {
   id: string;

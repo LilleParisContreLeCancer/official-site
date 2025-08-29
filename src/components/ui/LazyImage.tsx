@@ -36,7 +36,7 @@ export const LazyImage = ({
   rootMargin = '100px 0px',
   threshold = 0.1,
 }: LazyImageProps) => {
-  const [shouldLoad, setShouldLoad] = useState(priority); // Load immediately if priority
+  const [shouldLoad,] = useState(priority); // Load immediately if priority
   const { elementRef, hasIntersected } = useIntersectionObserver({
     threshold,
     rootMargin,
