@@ -19,7 +19,7 @@ jobs:
     environment:
       name: github-pages
     runs-on: ubuntu-latest
-    env: # ✅ Injection des variables d'environnement dès le job
+    env:
       NEXT_PUBLIC_FORMSPREE_ID: ${{ vars.NEXT_PUBLIC_FORMSPREE_ID }}
     steps:
       - name: Checkout
@@ -38,29 +38,23 @@ jobs:
 
       - name: Install dependencies
         run: |
-          # Install dependencies including optional dependencies
           npm ci --include=optional
-          # Rebuild native dependencies for the current platform
           npm rebuild
           
       - name: Setup environment
         run: |
           echo "NEXT_PUBLIC_FORMSPREE_ID=$NEXT_PUBLIC_FORMSPREE_ID" > .env.production
           echo "NODE_ENV=production" >> .env.production
-          # Ensure the .next/cache directory exists
           mkdir -p .next/cache
 
       - name: Build with Next.js
         env:
           NEXT_PUBLIC_FORMSPREE_ID: ${{ vars.NEXT_PUBLIC_FORMSPREE_ID }}
-          # Optimize build performance
           NODE_OPTIONS: --max_old_space_size=4096
+          NEXT_DISABLE_LIGHTNINGCSS: 1   # 👈 Disable LightningCSS native bindings
         run: |
-          # Clean previous builds
           rm -rf .next
-          # Build the application
           npm run build
-          # Export to static files
           npm run export
 
       - name: Upload artifact
