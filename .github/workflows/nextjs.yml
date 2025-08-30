@@ -50,12 +50,12 @@ jobs:
       - name: Build with Next.js
         env:
           NEXT_PUBLIC_FORMSPREE_ID: ${{ vars.NEXT_PUBLIC_FORMSPREE_ID }}
+          # Optimize build performance
           NODE_OPTIONS: --max_old_space_size=4096
-          NEXT_DISABLE_LIGHTNINGCSS: 1   # 👈 Disable LightningCSS native bindings
+          NEXT_DISABLE_LIGHTNINGCSS: 1   # Disable LightningCSS native bindings
         run: |
           rm -rf .next
           npm run build
-          npm run export
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
