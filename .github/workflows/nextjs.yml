@@ -37,17 +37,27 @@ jobs:
           static_site_generator: next
 
       - name: Install dependencies
-        run: npm install
-      
+        run: |
+          npm install
+          # Rebuild native dependencies for the current platform
+          npm rebuild
+          
       - name: Check specific variable
-        run: 
+        run: |
           echo $NEXT_PUBLIC_FORMSPREE_ID
           echo "NEXT_PUBLIC_FORMSPREE_ID=$NEXT_PUBLIC_FORMSPREE_ID" > .env.production
+          # Ensure the .next/cache directory exists
+          mkdir -p .next/cache
 
       - name: Build with Next.js
         env:
           NEXT_PUBLIC_FORMSPREE_ID: ${{ vars.NEXT_PUBLIC_FORMSPREE_ID }}
-        run: npm run build
+          # Enable experimental features for better build performance
+          NEXT_TURBO: 1
+        run: |
+          npm run build
+          # Generate a clean build output
+          npm run export
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
