@@ -38,31 +38,36 @@ jobs:
 
       - name: Install dependencies
         run: |
-          npm install
+          # Install dependencies including optional dependencies
+          npm ci --include=optional
           # Rebuild native dependencies for the current platform
           npm rebuild
           
-      - name: Check specific variable
+      - name: Setup environment
         run: |
-          echo $NEXT_PUBLIC_FORMSPREE_ID
           echo "NEXT_PUBLIC_FORMSPREE_ID=$NEXT_PUBLIC_FORMSPREE_ID" > .env.production
+          echo "NODE_ENV=production" >> .env.production
           # Ensure the .next/cache directory exists
           mkdir -p .next/cache
 
       - name: Build with Next.js
         env:
           NEXT_PUBLIC_FORMSPREE_ID: ${{ vars.NEXT_PUBLIC_FORMSPREE_ID }}
-          # Enable experimental features for better build performance
-          NEXT_TURBO: 1
+          # Optimize build performance
+          NODE_OPTIONS: --max_old_space_size=4096
         run: |
+          # Clean previous builds
+          rm -rf .next
+          # Build the application
           npm run build
-          # Generate a clean build output
+          # Export to static files
           npm run export
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out
+          path: ./out/
+          retention-days: 1
 
   deploy:
     environment:
